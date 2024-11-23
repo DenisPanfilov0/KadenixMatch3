@@ -7,12 +7,12 @@ public partial class LevelDesignerWindow : EditorWindow
 {
     private void DrawBoardGridCells(float startX, float startY)
     {
-        for (int y = 0; y < gridSize; y++)
+        for (int y = gridSize - 1; y >= 0; y--) // Изменение направления: от нижней строки к верхней
         {
             for (int x = 0; x < gridSize; x++)
             {
                 Vector2Int cellPos = new Vector2Int(x, y);
-                Rect cellRect = new Rect(startX + x * cellSize, startY + y * cellSize, cellSize, cellSize);
+                Rect cellRect = new Rect(startX + x * cellSize, startY + (gridSize - 1 - y) * cellSize, cellSize, cellSize);
 
                 if (gridData.TryGetValue(cellPos, out List<TileItem> tiles) && tiles != null)
                 {
@@ -45,6 +45,7 @@ public partial class LevelDesignerWindow : EditorWindow
             }
         }
     }
+
     
     private void HandleCellClick(Vector2Int cellPos)
     {
