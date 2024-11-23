@@ -1,0 +1,5 @@
+E:/Match3Reference/0000/KadenixMatch3/src/KadenixMatch3/.utmp/RelWithDebInfo/4o572w24/arm64-v8a/CMakeFiles/edit_cache.dir
+E:/Match3Reference/0000/KadenixMatch3/src/KadenixMatch3/.utmp/RelWithDebInfo/4o572w24/arm64-v8a/CMakeFiles/rebuild_cache.dir
+E:/Match3Reference/0000/KadenixMatch3/src/KadenixMatch3/.utmp/RelWithDebInfo/4o572w24/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+E:/Match3Reference/0000/KadenixMatch3/src/KadenixMatch3/.utmp/RelWithDebInfo/4o572w24/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+E:/Match3Reference/0000/KadenixMatch3/src/KadenixMatch3/.utmp/RelWithDebInfo/4o572w24/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

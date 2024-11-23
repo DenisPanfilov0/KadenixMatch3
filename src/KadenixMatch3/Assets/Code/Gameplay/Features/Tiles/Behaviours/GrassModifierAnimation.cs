@@ -1,0 +1,28 @@
+using System.Collections.Generic;
+using DG.Tweening;
+using UnityEngine;
+
+namespace Code.Gameplay.Features.Tiles.Behaviours
+{
+    public class GrassModifierAnimation : MonoBehaviour
+    {
+        public SpriteRenderer SpriteRenderer;
+        public List<Sprite> Sprites;
+
+        public void DurabilityChange(GameEntity entity)
+        {
+            SpriteRenderer.sprite = Sprites[entity.TileDurability - 1];
+        }
+
+        public void TilesOnDestroy(GameEntity entity)
+        {
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.Append(transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.OutQuad))
+                .OnComplete(() =>
+                {
+                    entity.isDestructed = true;
+                });
+        }
+    }
+}

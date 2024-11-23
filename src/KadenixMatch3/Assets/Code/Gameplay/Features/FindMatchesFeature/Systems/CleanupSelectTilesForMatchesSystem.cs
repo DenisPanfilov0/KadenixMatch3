@@ -1,0 +1,29 @@
+using System.Collections.Generic;
+using Entitas;
+
+namespace Code.Gameplay.Features.FindMatchesFeature.Systems
+{
+    public class CleanupSelectTilesForMatchesSystem : IExecuteSystem
+    {
+        private readonly IGroup<GameEntity> _matchables;
+        private List<GameEntity> _buffer = new(64);
+
+        public CleanupSelectTilesForMatchesSystem(GameContext game)
+        {
+            _matchables = game.GetGroup(GameMatcher
+                .AllOf(
+                    GameMatcher.WorldPosition,
+                    GameMatcher.Transform,
+                    GameMatcher.Matchable,
+                    GameMatcher.SelectTileResearchMatches));
+        }
+    
+        public void Execute()
+        {
+            foreach (GameEntity matchable in _matchables.GetEntities(_buffer))
+            {
+                matchable.isSelectTileResearchMatches = false;
+            }
+        }
+    }
+}
