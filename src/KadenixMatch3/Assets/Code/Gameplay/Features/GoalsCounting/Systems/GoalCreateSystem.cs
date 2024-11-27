@@ -1,3 +1,4 @@
+using System.Linq;
 using Code.Common.Entity;
 using Code.Gameplay.Common.Extension;
 using Code.Progress.Data;
@@ -15,7 +16,8 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
         {
             _progress = progress;
             
-            _lvl = _progress.ProgressData.ProgressModel.Levels[_progress.ProgressData.ProgressModel.CurrentLevel - 1];
+            _lvl = _progress.ProgressData.ProgressModel.Levels.FirstOrDefault(x =>
+                x.id == _progress.ProgressData.ProgressModel.CurrentLevel);
         }
     
         public void Initialize()

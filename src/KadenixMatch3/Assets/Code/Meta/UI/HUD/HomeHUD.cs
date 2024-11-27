@@ -28,8 +28,9 @@ namespace Code.Meta.UI.HUD
             StartBattleButton.onClick.AddListener(EnterBattleLoadingState);
         }
 
-        private void EnterBattleLoadingState() => 
-            _stateMachine.Enter<LoadingMatch3State, string>(BattleSceneName);
+        private void EnterBattleLoadingState() =>
+            // _stateMachine.Enter<LoadingMatch3State, string>(BattleSceneName);
+            _windowService.Open(WindowId.StartLevelPanel);
     
         private void OpenShop()
         {

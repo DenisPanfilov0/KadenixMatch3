@@ -1,3 +1,4 @@
+using System.Linq;
 using Code.Gameplay.Common.Extension;
 using Code.Gameplay.Features.BoardBuildFeature.Factory;
 using Code.Progress.Data;
@@ -20,7 +21,8 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
         
         public void Initialize()
         {
-            Level lvl = _progress.ProgressData.ProgressModel.Levels[_progress.ProgressData.ProgressModel.CurrentLevel - 1];
+            Level lvl = _progress.ProgressData.ProgressModel.Levels.FirstOrDefault(x =>
+                x.id == _progress.ProgressData.ProgressModel.CurrentLevel);
 
             foreach (var tile in lvl.boardState)
             {

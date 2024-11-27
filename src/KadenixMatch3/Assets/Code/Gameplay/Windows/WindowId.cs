@@ -7,5 +7,8 @@
     GameOverWindow = 2,
     GameLoseWindow = 3,
     GameWinWindow = 4,
+    
+    StartLevelPanel = 5,
+    DailyMarksPanel = 6,
   }
 }

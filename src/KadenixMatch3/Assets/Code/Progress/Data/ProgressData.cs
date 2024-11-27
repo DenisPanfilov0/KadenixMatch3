@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using UnityEngine.Serialization;
 
 namespace Code.Progress.Data
 {
@@ -10,54 +11,34 @@ namespace Code.Progress.Data
     [JsonProperty("at")] public DateTime LastSimulationTickTime;
     public ProgressModel ProgressModel;
   }
-  
+
   [Serializable]
   public class ProgressModel
   {
     public int CurrentLevel;
-    public List<Level> Levels = new();
-  }
-  
-  [Serializable]
-  public class LevelsData
-  {
     public List<Level> Levels;
+    public SequentialLevelsReward SequentialLevelsReward;
+    public CharacterBoosters CharacterBoosters;
+
+    public ProgressModel()
+    {
+      CurrentLevel = 1;
+      Levels = new();
+      SequentialLevelsReward = new SequentialLevelsReward();
+      CharacterBoosters = new CharacterBoosters();
+    }
   }
 
   [Serializable]
-  public class Level
+  public class CharacterBoosters
   {
-    public List<Tile> boardState;
-    public string type;
-    public List<string> generatableItems;
-    public Dictionary<string, int> goals;
-    public int moves;
-    public int id;
-  }
+    public int HandSkill;
+    public int SwapSkill;
 
-  [Serializable]
-  public class Tile
-  {
-    public int xPos;
-    public int yPos;
-    public string tileType;
-    public List<TileModifier> tileModifiers;
-    public List<TileContentModifier> tileContentModifiers;
-    public string tileContentType;
-    public int tileContentDurability;
-  }
-
-  [Serializable]
-  public class TileModifier
-  {
-    public string tileModifierType;
-    public int durability;
-  }
-
-  [Serializable]
-  public class TileContentModifier
-  {
-    public string tileContentModifierType;
-    public int durability;
+    public CharacterBoosters()
+    {
+      HandSkill = 5;
+      SwapSkill = 0;
+    }
   }
 }

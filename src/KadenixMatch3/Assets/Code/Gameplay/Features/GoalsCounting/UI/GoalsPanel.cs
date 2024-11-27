@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Code.Gameplay.Common.Extension;
 using Code.Gameplay.Features.BoardBuildFeature;
@@ -45,7 +46,8 @@ namespace Code.Gameplay.Features.GoalsCounting.UI
 
         private async Task GoalsFill()
         {
-            Level lvl = _progress.ProgressData.ProgressModel.Levels[_progress.ProgressData.ProgressModel.CurrentLevel - 1];
+            Level lvl = _progress.ProgressData.ProgressModel.Levels.FirstOrDefault(x =>
+                x.id == _progress.ProgressData.ProgressModel.CurrentLevel);
 
             foreach (var goal in lvl.goals)
             {
