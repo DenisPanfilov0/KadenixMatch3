@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Code.Gameplay.Features.GoalsCounting.Services;
 using Code.Gameplay.Windows;
 using Code.Progress.Data;
@@ -28,7 +29,8 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
                     GameMatcher.GoalCompleted)
                 .NoneOf(GameMatcher.GameWin));
             
-            _lvl = _progress.ProgressData.ProgressModel.Levels[_progress.ProgressData.ProgressModel.CurrentLevel - 1];
+            _lvl = _progress.ProgressData.ProgressModel.Levels.FirstOrDefault(x =>
+                x.id == _progress.ProgressData.ProgressModel.CurrentLevel);
         }
 
         public void Execute()

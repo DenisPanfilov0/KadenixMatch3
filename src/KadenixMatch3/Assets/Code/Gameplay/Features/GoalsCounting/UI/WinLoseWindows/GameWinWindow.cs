@@ -8,8 +8,8 @@ namespace Code.Gameplay.Features.GoalsCounting.UI.WinLoseWindows
 {
     public class GameWinWindow : BaseWindow
     {
-        [SerializeField] private Button _openMainMenu;
-        [SerializeField] private Button _restartLevel;
+        [SerializeField] private Button _continueButton;
+        
         private IGameWinOrLoseUIService _gameWinOrLoseUIService;
         private IWindowService _windowService;
 
@@ -23,26 +23,18 @@ namespace Code.Gameplay.Features.GoalsCounting.UI.WinLoseWindows
 
         protected override void Initialize()
         {
-            _openMainMenu.onClick.AddListener(EnterMainMenu);
-            _restartLevel.onClick.AddListener(RestartLevel);
+            _continueButton.onClick.AddListener(Continue);
         }
 
         protected override void UnsubscribeUpdates()
         {
-            _openMainMenu.onClick.RemoveListener(EnterMainMenu);
-            _restartLevel.onClick.RemoveListener(RestartLevel);
+            _continueButton.onClick.RemoveListener(Continue);
         }
 
-        private void EnterMainMenu()
+        private void Continue()
         {
-            _gameWinOrLoseUIService.EnterMainMenu();
             _windowService.Close(Id);
-        }
-
-        private void RestartLevel()
-        {
-            _gameWinOrLoseUIService.RestartLevel();
-            _windowService.Close(Id);
+            _gameWinOrLoseUIService.Continue();
         }
     }
 }

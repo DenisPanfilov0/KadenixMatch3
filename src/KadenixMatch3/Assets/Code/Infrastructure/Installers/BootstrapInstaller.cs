@@ -18,6 +18,8 @@ using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View.Factory;
+using Code.Meta.Feature.StartLevel.Service;
+using Code.Meta.Feature.StreakLevelsRewarded.Services;
 using Code.Progress.Provider;
 using Code.Progress.SaveLoad;
 using Zenject;
@@ -35,6 +37,7 @@ namespace Code.Infrastructure.Installers
       BindSystemFactory();
       BindUIFactories();
       BindContexts();
+      BindMetaServices();
       BindGameplayServices();
       BindUIServices();
       BindCameraProvider();
@@ -85,6 +88,12 @@ namespace Code.Infrastructure.Installers
     {
       Container.Bind<IProgressProvider>().To<ProgressProvider>().AsSingle();
       Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
+    }
+
+    private void BindMetaServices()
+    {
+      Container.Bind<IStreakLevelsRewardUIService>().To<StreakLevelsRewardUIService>().AsSingle();
+      Container.Bind<IStartLevelUIService>().To<StartLevelUIService>().AsSingle();
     }
 
     private void BindGameplayServices()
