@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Code.Meta.Feature.Shop;
+using Code.Meta.Feature.Shop.Services;
 using Code.Progress.Provider;
-using UnityEngine;
 
 namespace Code.Meta.Feature.StartLevel.Service
 {
@@ -14,11 +14,20 @@ namespace Code.Meta.Feature.StartLevel.Service
         private Dictionary<ShopItemId, int> _shopItemParser;
 
         private List<ShopItemId> _boostersSelected = new();
+        private IShopItemUIService _shopItemUIService;
 
-        public StartLevelUIService(IProgressProvider progress)
+        public StartLevelUIService(IProgressProvider progress, IShopItemUIService shopItemUIService)
         {
+            _shopItemUIService = shopItemUIService;
             _progress = progress;
             
+            ShopItemParserUpdate();
+
+            // _shopItemUIService.ItemPurchased += OnClickButtonPreBooster;
+        }
+
+        private void ShopItemParserUpdate()
+        {
             _shopItemParser = new()
             {
                 { ShopItemId.HandSkill, _progress.ProgressData.ProgressModel.CharacterBoosters.HandSkill},
@@ -28,6 +37,8 @@ namespace Code.Meta.Feature.StartLevel.Service
 
         public int GetAmountItemShop(ShopItemId itemId)
         {
+            ShopItemParserUpdate();
+            
             _shopItemParser.TryGetValue(itemId, out int amount);
             return amount;
         }
@@ -49,7 +60,7 @@ namespace Code.Meta.Feature.StartLevel.Service
             }
             else
             {
-                Debug.Log($"Open Shop {itemId}");
+                _shopItemUIService.OpenShopItemWindow(itemId);
             }
         }
     }
