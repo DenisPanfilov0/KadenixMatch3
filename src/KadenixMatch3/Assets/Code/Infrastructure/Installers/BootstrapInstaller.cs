@@ -18,6 +18,7 @@ using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View.Factory;
+using Code.Meta.Feature.Shop.Services;
 using Code.Meta.Feature.StartLevel.Service;
 using Code.Meta.Feature.StreakLevelsRewarded.Services;
 using Code.Progress.Provider;
@@ -37,8 +38,8 @@ namespace Code.Infrastructure.Installers
       BindSystemFactory();
       BindUIFactories();
       BindContexts();
-      BindMetaServices();
       BindGameplayServices();
+      BindMetaServices();
       BindUIServices();
       BindCameraProvider();
       BindGameplayFactories();
@@ -94,6 +95,7 @@ namespace Code.Infrastructure.Installers
     {
       Container.Bind<IStreakLevelsRewardUIService>().To<StreakLevelsRewardUIService>().AsSingle();
       Container.Bind<IStartLevelUIService>().To<StartLevelUIService>().AsSingle();
+      Container.Bind<IShopItemUIService>().To<ShopItemUIService>().AsSingle();
     }
 
     private void BindGameplayServices()

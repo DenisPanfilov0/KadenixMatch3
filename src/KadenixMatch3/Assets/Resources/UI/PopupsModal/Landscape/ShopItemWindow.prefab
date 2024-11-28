@@ -358,8 +358,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921311934572087367}
+  - component: {fileID: -708394739424292601}
   m_Layer: 5
-  m_Name: ShopItemPanel
+  m_Name: ShopItemWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,6 +391,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &-708394739424292601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353978693606401964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21645644e5cc4816973d0e11237e44b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lable: {fileID: 3823398226035932362}
+  _amount: {fileID: 1905533408681707074}
+  _icon: {fileID: 7939295468662655692}
+  _decription: {fileID: 7205934157977312012}
+  _price: {fileID: 3932950829092127856}
+  _closeWindow: {fileID: 4650538523508883672}
+  _buyItem: {fileID: 8484327979735730651}
 --- !u!1 &2942534324060491763
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +716,7 @@ GameObject:
   - component: {fileID: 8484327979735730651}
   - component: {fileID: 6868880401610293156}
   m_Layer: 5
-  m_Name: Play_button
+  m_Name: BuyItem_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

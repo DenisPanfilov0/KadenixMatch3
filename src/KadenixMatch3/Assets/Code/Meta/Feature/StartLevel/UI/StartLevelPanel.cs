@@ -7,6 +7,7 @@ using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Meta.Feature.Shop;
+using Code.Meta.Feature.Shop.Services;
 using Code.Meta.Feature.StartLevel.Service;
 using Code.Progress.Data;
 using Code.Progress.Provider;
@@ -32,13 +33,15 @@ namespace Code.Meta.Feature.StartLevel.UI
         private IWindowService _windowService;
         private IGameStateMachine _stateMachine;
         private IStartLevelUIService _startLevelUIService;
+        private IShopItemUIService _shopItemUIService;
 
         private const string BattleSceneName = "Match3";
 
         [Inject]
         public void Construct(IProgressProvider progress, IAssetProvider assetProvider, IWindowService windowService,
-            IGameStateMachine stateMachine, IStartLevelUIService startLevelUIService)
+            IGameStateMachine stateMachine, IStartLevelUIService startLevelUIService, IShopItemUIService shopItemUIService)
         {
+            _shopItemUIService = shopItemUIService;
             _startLevelUIService = startLevelUIService;
             _stateMachine = stateMachine;
             _windowService = windowService;
@@ -48,7 +51,7 @@ namespace Code.Meta.Feature.StartLevel.UI
             _lvl = _progress.ProgressData.ProgressModel.Levels.FirstOrDefault(x =>
                 x.id == _progress.ProgressData.ProgressModel.CurrentLevel);
             
-            Id = WindowId.ShopWindow;
+            Id = WindowId.StartLevelPanel;
         }
 
         private void Start()
@@ -83,7 +86,7 @@ namespace Code.Meta.Feature.StartLevel.UI
         {
             foreach (var booster in _boosters)
             {
-                booster.Initialize(_startLevelUIService);
+                booster.Initialize(_startLevelUIService, _shopItemUIService);
             }
         }
     }

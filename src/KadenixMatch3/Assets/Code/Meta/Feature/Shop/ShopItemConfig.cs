@@ -1,11 +1,13 @@
+using System;
 using UnityEngine;
 
 namespace Code.Meta.Feature.Shop
 {
-    [CreateAssetMenu(fileName = "shopItemConfig", menuName = "ECS Survivors/Shop Item Config")]
-    public class ShopItemConfig : ScriptableObject
+    [Serializable]
+    public class ShopItemConfig
     {
         public ShopItemId ShopItemId;
+        public string Lable;
         public int Amount;
         public int Price;
         public string Description;

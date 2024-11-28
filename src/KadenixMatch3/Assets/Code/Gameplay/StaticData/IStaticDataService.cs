@@ -1,4 +1,6 @@
-﻿using Code.Gameplay.Windows;
+﻿using System.Collections.Generic;
+using Code.Gameplay.Windows;
+using Code.Meta.Feature.Shop;
 using UnityEngine;
 
 namespace Code.Gameplay.StaticData
@@ -8,5 +10,6 @@ namespace Code.Gameplay.StaticData
     void LoadAll();
     
     GameObject GetWindowPrefab(WindowId id);
+    List<ShopItemConfig> GetShopItemsConfig();
   }
 }

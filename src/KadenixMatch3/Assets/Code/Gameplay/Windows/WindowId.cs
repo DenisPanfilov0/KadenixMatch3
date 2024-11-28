@@ -10,5 +10,6 @@
     
     StartLevelPanel = 5,
     DailyMarksPanel = 6,
+    ShopItemWindow = 7,
   }
 }
