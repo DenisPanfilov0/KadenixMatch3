@@ -21,10 +21,8 @@ namespace Code.Gameplay.Common
   [Game] public class TileActiveProcess : IComponent { }
   [Game] public class DestructedProcess : IComponent { }
   
-  [Game] public class BoardState : IComponent { }
-  
   [Game] public class BoardTile : IComponent { }
-  [Game] public class CanSwap : IComponent { }
+  // [Game] public class CanSwap : IComponent { }
   
   [Game] public class TileContent : IComponent { }
   [Game] public class TileModifier : IComponent { }

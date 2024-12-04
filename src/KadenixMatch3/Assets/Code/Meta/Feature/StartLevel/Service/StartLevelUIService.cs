@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Code.Infrastructure.States.GameStates;
+using Code.Infrastructure.States.StateMachine;
+using Code.Meta.Feature.Heart.Services;
 using Code.Meta.Feature.Shop;
 using Code.Meta.Feature.Shop.Services;
 using Code.Progress.Provider;
@@ -15,10 +18,17 @@ namespace Code.Meta.Feature.StartLevel.Service
 
         private List<ShopItemId> _boostersSelected = new();
         private IShopItemUIService _shopItemUIService;
+        private readonly IGameStateMachine _stateMachine;
+        private readonly ICharacterHeartUIService _characterHeartUIService;
 
-        public StartLevelUIService(IProgressProvider progress, IShopItemUIService shopItemUIService)
+        private const string BattleSceneName = "Match3";
+
+        public StartLevelUIService(IProgressProvider progress, IShopItemUIService shopItemUIService, IGameStateMachine stateMachine,
+            ICharacterHeartUIService characterHeartUIService)
         {
             _shopItemUIService = shopItemUIService;
+            _stateMachine = stateMachine;
+            _characterHeartUIService = characterHeartUIService;
             _progress = progress;
             
             ShopItemParserUpdate();
@@ -61,6 +71,15 @@ namespace Code.Meta.Feature.StartLevel.Service
             else
             {
                 _shopItemUIService.OpenShopItemWindow(itemId);
+            }
+        }
+
+        public void StartLevel()
+        {
+            if (_characterHeartUIService.GetCountHearts() >= 1)
+            {
+                _stateMachine.Enter<LoadingMatch3State, string>(BattleSceneName);
+                _characterHeartUIService.DecreaseHeart(1);
             }
         }
     }

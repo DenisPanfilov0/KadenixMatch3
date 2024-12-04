@@ -4,6 +4,7 @@ using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Common.Random;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.BoardBuildFeature.Factory;
+using Code.Gameplay.Features.CountingMoves.Services;
 using Code.Gameplay.Features.FindMatchesFeature.Services;
 using Code.Gameplay.Features.GoalsCounting.Services;
 using Code.Gameplay.Features.GoalsCounting.UI;
@@ -18,6 +19,8 @@ using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View.Factory;
+using Code.Meta.Feature.Gold.Services;
+using Code.Meta.Feature.Heart.Services;
 using Code.Meta.Feature.Shop.Services;
 using Code.Meta.Feature.StartLevel.Service;
 using Code.Meta.Feature.StreakLevelsRewarded.Services;
@@ -96,6 +99,8 @@ namespace Code.Infrastructure.Installers
       Container.Bind<IStreakLevelsRewardUIService>().To<StreakLevelsRewardUIService>().AsSingle();
       Container.Bind<IStartLevelUIService>().To<StartLevelUIService>().AsSingle();
       Container.Bind<IShopItemUIService>().To<ShopItemUIService>().AsSingle();
+      Container.Bind<ICharacterHeartUIService>().To<CharacterHeartUIService>().AsSingle();
+      Container.Bind<ICharacterGoldUIService>().To<CharacterGoldUIService>().AsSingle();
     }
 
     private void BindGameplayServices()
@@ -105,6 +110,7 @@ namespace Code.Infrastructure.Installers
       Container.Bind<ISkillUIService>().To<SkillUIService>().AsSingle();
       Container.Bind<IGoalsUIService>().To<GoalsUIService>().AsSingle();
       Container.Bind<IGameWinOrLoseUIService>().To<GameWinOrLoseUIService>().AsSingle();
+      Container.Bind<IMovesInGameService>().To<MovesInGameService>().AsSingle();
     }
 
     private void BindGameplayFactories()

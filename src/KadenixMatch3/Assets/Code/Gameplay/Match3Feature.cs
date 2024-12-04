@@ -3,6 +3,8 @@ using Code.Gameplay.Features.ActiveInteractionFeature;
 using Code.Gameplay.Features.ActiveStartStateTilesFeature;
 using Code.Gameplay.Features.BindingTilesFeature;
 using Code.Gameplay.Features.BoardBuildFeature;
+using Code.Gameplay.Features.BoardState;
+using Code.Gameplay.Features.CountingMoves;
 using Code.Gameplay.Features.FindMatchesFeature;
 using Code.Gameplay.Features.GoalsCounting;
 using Code.Gameplay.Features.Input;
@@ -20,6 +22,7 @@ namespace Code.Gameplay
     public Match3Feature(ISystemFactory systems)
     {
       Add(systems.Create<BoardBuildFeature>());
+      Add(systems.Create<BoardStateFeature>());
       
       Add(systems.Create<ActiveStartStateTilesFeature>());
       
@@ -34,6 +37,9 @@ namespace Code.Gameplay
       Add(systems.Create<PowerUpGeneratedFeature>());
       
       Add(systems.Create<ActiveInteractionFeature>());
+      
+      Add(systems.Create<CountingMovesFeature>());
+      
       Add(systems.Create<GoalsCountingFeature>());
       
       Add(systems.Create<BindingTilesFeature>());

@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Common.CanSwap canSwapComponent = new Code.Gameplay.Common.CanSwap();
+    static readonly Code.Gameplay.Features.BoardState.CanSwap canSwapComponent = new Code.Gameplay.Features.BoardState.CanSwap();
 
     public bool isCanSwap {
         get { return HasComponent(GameComponentsLookup.CanSwap); }
