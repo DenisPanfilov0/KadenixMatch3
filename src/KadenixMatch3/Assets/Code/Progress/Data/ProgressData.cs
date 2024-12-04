@@ -17,6 +17,7 @@ namespace Code.Progress.Data
   {
     public int CurrentLevel;
     public int Coins;
+    public int Heart;
     public List<Level> Levels;
     public SequentialLevelsReward SequentialLevelsReward;
     public CharacterBoosters CharacterBoosters;
@@ -24,7 +25,8 @@ namespace Code.Progress.Data
     public ProgressModel()
     {
       CurrentLevel = 1;
-      Coins = 1000;
+      Coins = 2500;
+      Heart = 5;
       Levels = new();
       SequentialLevelsReward = new SequentialLevelsReward();
       CharacterBoosters = new CharacterBoosters();

@@ -19,100 +19,106 @@ public static class GameComponentsLookup {
     public const int Active = 8;
     public const int AnimationProcess = 9;
     public const int BoardPosition = 10;
-    public const int BoardState = 11;
-    public const int BoardTile = 12;
-    public const int CanSwap = 13;
-    public const int DamageReceived = 14;
-    public const int DestructedProcess = 15;
-    public const int DirectInteraction = 16;
-    public const int EntityLink = 17;
-    public const int GrassModifierAnimation = 18;
-    public const int IceModifierAnimation = 19;
-    public const int Id = 20;
-    public const int IndirectInteractable = 21;
-    public const int IndirectInteraction = 22;
-    public const int Matchable = 23;
-    public const int Movable = 24;
-    public const int NotMovable = 25;
-    public const int PositionInCoverageQueue = 26;
-    public const int PowerUpTileTweenAnimation = 27;
-    public const int SpriteRenderer = 28;
-    public const int Swappable = 29;
-    public const int TargetId = 30;
-    public const int TileActiveProcess = 31;
-    public const int TileContent = 32;
-    public const int TileContentModifier = 33;
-    public const int TileDurability = 34;
-    public const int TileFallableSurface = 35;
-    public const int TileModifier = 36;
-    public const int TilePowerUp = 37;
-    public const int TileSpawner = 38;
-    public const int TileTweenAnimation = 39;
-    public const int TileType = 40;
-    public const int Transform = 41;
-    public const int TransparentToMatch = 42;
-    public const int WorldPosition = 43;
-    public const int ActiveInteraction = 44;
-    public const int ColoredCrystal = 45;
-    public const int GrassModifier = 46;
-    public const int IceModifier = 47;
-    public const int InactiveStartState = 48;
-    public const int InteractionDelay = 49;
-    public const int InteractionStep = 50;
-    public const int PowerUpBomb = 51;
-    public const int PowerUpBombAndBomb = 52;
-    public const int PowerUpBombAndRocket = 53;
-    public const int PowerUpHorizontalRocket = 54;
-    public const int PowerUpMagicalBall = 55;
-    public const int PowerUpMagicalBallAndCrystal = 56;
-    public const int PowerUpMagicalBallAndPowerUp = 57;
-    public const int PowerUpRocketAndRocket = 58;
-    public const int PowerUpVerticalRocket = 59;
-    public const int FindMatches = 60;
-    public const int FindMatchesProcess = 61;
-    public const int IdenticalTilesForMatche = 62;
-    public const int MovedForCenterBooster = 63;
-    public const int SelectTileResearchMatches = 64;
-    public const int TileGroupConvergeForBooster = 65;
-    public const int TilesInShape = 66;
-    public const int GameLose = 67;
-    public const int GameWin = 68;
-    public const int GoalAmount = 69;
-    public const int GoalCheck = 70;
-    public const int GoalCompleted = 71;
-    public const int GoalType = 72;
-    public const int FirstSelectPowerUpSwipe = 73;
-    public const int FirstSelectTileSwipe = 74;
-    public const int SecondSelectPowerUpSwipe = 75;
-    public const int SecondSelectTileSwipe = 76;
-    public const int SwipeDirection = 77;
-    public const int TileSwipeProcessed = 78;
-    public const int AutoActiveTile = 79;
-    public const int PowerUpFigureType = 80;
-    public const int PowerUpGenerated = 81;
-    public const int PowerUpSpawnAnimation = 82;
-    public const int TileForPowerUpGeneration = 83;
-    public const int TileForPowerUpGenerationByType = 84;
-    public const int CharacterSkillActivationRequest = 85;
-    public const int CharacterSkillProcessed = 86;
-    public const int CrossDestructionSkillRequest = 87;
-    public const int HandSkillRequest = 88;
-    public const int SwapSkillRequest = 89;
-    public const int TileNotActivatedAfterSwap = 90;
-    public const int TilesSkillSwap = 91;
-    public const int SpawnerTilesPool = 92;
-    public const int ColoredTileAnimation = 93;
-    public const int AccelerationTime = 94;
-    public const int CanFall = 95;
-    public const int EndFalling = 96;
-    public const int FallDelay = 97;
-    public const int FallDirection = 98;
-    public const int FallingSpeed = 99;
-    public const int ProcessedFalling = 100;
-    public const int SpeedFall = 101;
-    public const int StartedFalling = 102;
+    public const int BoardTile = 11;
+    public const int DamageReceived = 12;
+    public const int DestructedProcess = 13;
+    public const int DirectInteraction = 14;
+    public const int EntityLink = 15;
+    public const int GrassModifierAnimation = 16;
+    public const int IceModifierAnimation = 17;
+    public const int Id = 18;
+    public const int IndirectInteractable = 19;
+    public const int IndirectInteraction = 20;
+    public const int Matchable = 21;
+    public const int Movable = 22;
+    public const int NotMovable = 23;
+    public const int PositionInCoverageQueue = 24;
+    public const int PowerUpTileTweenAnimation = 25;
+    public const int SpriteRenderer = 26;
+    public const int Swappable = 27;
+    public const int TargetId = 28;
+    public const int TileActiveProcess = 29;
+    public const int TileContent = 30;
+    public const int TileContentModifier = 31;
+    public const int TileDurability = 32;
+    public const int TileFallableSurface = 33;
+    public const int TileModifier = 34;
+    public const int TilePowerUp = 35;
+    public const int TileSpawner = 36;
+    public const int TileTweenAnimation = 37;
+    public const int TileType = 38;
+    public const int Transform = 39;
+    public const int TransparentToMatch = 40;
+    public const int WorldPosition = 41;
+    public const int ActiveInteraction = 42;
+    public const int ColoredCrystal = 43;
+    public const int GrassModifier = 44;
+    public const int IceModifier = 45;
+    public const int InactiveStartState = 46;
+    public const int InteractionDelay = 47;
+    public const int InteractionStep = 48;
+    public const int PowerUpBomb = 49;
+    public const int PowerUpBombAndBomb = 50;
+    public const int PowerUpBombAndRocket = 51;
+    public const int PowerUpHorizontalRocket = 52;
+    public const int PowerUpMagicalBall = 53;
+    public const int PowerUpMagicalBallAndCrystal = 54;
+    public const int PowerUpMagicalBallAndPowerUp = 55;
+    public const int PowerUpRocketAndRocket = 56;
+    public const int PowerUpVerticalRocket = 57;
+    public const int BoardActiveInteraction = 58;
+    public const int BoardState = 59;
+    public const int CanSwap = 60;
+    public const int NoMoves = 61;
+    public const int DecreaseMoves = 62;
+    public const int IncreaseMoves = 63;
+    public const int Moves = 64;
+    public const int MovesChangeAmountProcess = 65;
+    public const int FindMatches = 66;
+    public const int FindMatchesProcess = 67;
+    public const int IdenticalTilesForMatche = 68;
+    public const int MovedForCenterBooster = 69;
+    public const int SelectTileResearchMatches = 70;
+    public const int TileGroupConvergeForBooster = 71;
+    public const int TilesInShape = 72;
+    public const int GameLose = 73;
+    public const int GameWin = 74;
+    public const int GoalAmount = 75;
+    public const int GoalCheck = 76;
+    public const int GoalCompleted = 77;
+    public const int GoalType = 78;
+    public const int FirstSelectPowerUpSwipe = 79;
+    public const int FirstSelectTileSwipe = 80;
+    public const int SecondSelectPowerUpSwipe = 81;
+    public const int SecondSelectTileSwipe = 82;
+    public const int SwipeDirection = 83;
+    public const int TileSwipeProcessed = 84;
+    public const int AutoActiveTile = 85;
+    public const int PowerUpFigureType = 86;
+    public const int PowerUpGenerated = 87;
+    public const int PowerUpSpawnAnimation = 88;
+    public const int TileForPowerUpGeneration = 89;
+    public const int TileForPowerUpGenerationByType = 90;
+    public const int CharacterSkillActivationRequest = 91;
+    public const int CharacterSkillProcessed = 92;
+    public const int CrossDestructionSkillRequest = 93;
+    public const int HandSkillRequest = 94;
+    public const int SwapSkillRequest = 95;
+    public const int TileNotActivatedAfterSwap = 96;
+    public const int TilesSkillSwap = 97;
+    public const int SpawnerTilesPool = 98;
+    public const int ColoredTileAnimation = 99;
+    public const int AccelerationTime = 100;
+    public const int CanFall = 101;
+    public const int EndFalling = 102;
+    public const int FallDelay = 103;
+    public const int FallDirection = 104;
+    public const int FallingSpeed = 105;
+    public const int ProcessedFalling = 106;
+    public const int SpeedFall = 107;
+    public const int StartedFalling = 108;
 
-    public const int TotalComponents = 103;
+    public const int TotalComponents = 109;
 
     public static readonly string[] componentNames = {
         "AddViewProcess",
@@ -126,9 +132,7 @@ public static class GameComponentsLookup {
         "Active",
         "AnimationProcess",
         "BoardPosition",
-        "BoardState",
         "BoardTile",
-        "CanSwap",
         "DamageReceived",
         "DestructedProcess",
         "DirectInteraction",
@@ -175,6 +179,14 @@ public static class GameComponentsLookup {
         "PowerUpMagicalBallAndPowerUp",
         "PowerUpRocketAndRocket",
         "PowerUpVerticalRocket",
+        "BoardActiveInteraction",
+        "BoardState",
+        "CanSwap",
+        "NoMoves",
+        "DecreaseMoves",
+        "IncreaseMoves",
+        "Moves",
+        "MovesChangeAmountProcess",
         "FindMatches",
         "FindMatchesProcess",
         "IdenticalTilesForMatche",
@@ -232,9 +244,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.Active),
         typeof(Code.Gameplay.Common.AnimationProcess),
         typeof(Code.Gameplay.Common.BoardPosition),
-        typeof(Code.Gameplay.Common.BoardState),
         typeof(Code.Gameplay.Common.BoardTile),
-        typeof(Code.Gameplay.Common.CanSwap),
         typeof(Code.Gameplay.Common.DamageReceived),
         typeof(Code.Gameplay.Common.DestructedProcess),
         typeof(Code.Gameplay.Common.DirectInteraction),
@@ -281,6 +291,14 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.ActiveInteractionFeature.PowerUpMagicalBallAndPowerUp),
         typeof(Code.Gameplay.Features.ActiveInteractionFeature.PowerUpRocketAndRocket),
         typeof(Code.Gameplay.Features.ActiveInteractionFeature.PowerUpVerticalRocket),
+        typeof(Code.Gameplay.Features.BoardState.BoardActiveInteraction),
+        typeof(Code.Gameplay.Features.BoardState.BoardState),
+        typeof(Code.Gameplay.Features.BoardState.CanSwap),
+        typeof(Code.Gameplay.Features.BoardState.NoMoves),
+        typeof(Code.Gameplay.Features.CountingMoves.DecreaseMoves),
+        typeof(Code.Gameplay.Features.CountingMoves.IncreaseMoves),
+        typeof(Code.Gameplay.Features.CountingMoves.Moves),
+        typeof(Code.Gameplay.Features.CountingMoves.MovesChangeAmountProcess),
         typeof(Code.Gameplay.Features.FindMatchesFeature.FindMatches),
         typeof(Code.Gameplay.Features.FindMatchesFeature.FindMatchesProcess),
         typeof(Code.Gameplay.Features.FindMatchesFeature.IdenticalTilesForMatche),

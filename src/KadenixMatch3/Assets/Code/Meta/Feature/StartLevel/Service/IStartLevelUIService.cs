@@ -8,5 +8,6 @@ namespace Code.Meta.Feature.StartLevel.Service
         int GetAmountItemShop(ShopItemId itemId);
         void OnClickButtonPreBooster(ShopItemId itemId);
         event Action<ShopItemId> PreBoosterSelected;
+        void StartLevel();
     }
 }

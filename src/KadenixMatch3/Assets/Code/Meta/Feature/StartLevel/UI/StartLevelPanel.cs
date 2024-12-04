@@ -1,12 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Code.Gameplay.Features.GoalsCounting.UI;
 using Code.Gameplay.Windows;
 using Code.Infrastructure.AssetManagement;
-using Code.Infrastructure.States.GameStates;
-using Code.Infrastructure.States.StateMachine;
-using Code.Meta.Feature.Shop;
 using Code.Meta.Feature.Shop.Services;
 using Code.Meta.Feature.StartLevel.Service;
 using Code.Progress.Data;
@@ -31,19 +26,15 @@ namespace Code.Meta.Feature.StartLevel.UI
         private Level _lvl;
         private IAssetProvider _assetProvider;
         private IWindowService _windowService;
-        private IGameStateMachine _stateMachine;
         private IStartLevelUIService _startLevelUIService;
         private IShopItemUIService _shopItemUIService;
 
-        private const string BattleSceneName = "Match3";
-
         [Inject]
         public void Construct(IProgressProvider progress, IAssetProvider assetProvider, IWindowService windowService,
-            IGameStateMachine stateMachine, IStartLevelUIService startLevelUIService, IShopItemUIService shopItemUIService)
+            IStartLevelUIService startLevelUIService, IShopItemUIService shopItemUIService)
         {
             _shopItemUIService = shopItemUIService;
             _startLevelUIService = startLevelUIService;
-            _stateMachine = stateMachine;
             _windowService = windowService;
             _assetProvider = assetProvider;
             _progress = progress;
@@ -62,8 +53,7 @@ namespace Code.Meta.Feature.StartLevel.UI
             _closeButton.onClick.AddListener(() => _windowService.Close(Id));
             _startLevelButton.onClick.AddListener(() =>
             {
-                _windowService.Close(Id);
-                _stateMachine.Enter<LoadingMatch3State, string>(BattleSceneName);
+                _startLevelUIService.StartLevel();
             });
 
         }

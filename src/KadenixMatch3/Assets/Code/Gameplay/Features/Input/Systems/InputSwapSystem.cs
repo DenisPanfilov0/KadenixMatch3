@@ -8,12 +8,15 @@ namespace Code.Gameplay.Features.Input.Systems
     {
         private readonly IGroup<GameEntity> _firstSelectTiles;
         private readonly IGroup<GameEntity> _secondSelectTiles;
+        private readonly IGroup<GameEntity> _moves;
         private List<GameEntity> _buffer = new(4);
+        private List<GameEntity> _bufferMoves = new(4);
 
         public InputSwapSystem(GameContext game)
         {
             _firstSelectTiles = game.GetGroup(GameMatcher.AllOf(GameMatcher.FirstSelectTileSwipe).NoneOf(GameMatcher.TileSwipeProcessed));
             _secondSelectTiles = game.GetGroup(GameMatcher.AllOf(GameMatcher.SecondSelectTileSwipe).NoneOf(GameMatcher.TileSwipeProcessed));
+            _moves = game.GetGroup(GameMatcher.AllOf(GameMatcher.Moves).NoneOf(GameMatcher.MovesChangeAmountProcess));
         }
     
         public void Execute()
@@ -49,6 +52,12 @@ namespace Code.Gameplay.Features.Input.Systems
                 
                 // firstSelectTile.Transform.position = new Vector3(firstSelectTile.BoardPosition.x, firstSelectTile.BoardPosition.y);
                 // secondSelectTile.Transform.position = new Vector3(secondSelectTile.BoardPosition.x, secondSelectTile.BoardPosition.y);
+
+                foreach (GameEntity move in _moves.GetEntities(_bufferMoves))
+                {
+                    move.AddDecreaseMoves(1);
+                    move.isMovesChangeAmountProcess = true;
+                }
                 
                 return;
             }
