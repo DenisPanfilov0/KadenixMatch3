@@ -8,4 +8,5 @@ namespace Code.Gameplay.Features.BoardState
     [Game] public class CanSwap : IComponent { }
     [Game] public class NoMoves : IComponent { }
     [Game] public class BoardActiveInteraction : IComponent { }
+    [Game] public class StopGame : IComponent { }
 }

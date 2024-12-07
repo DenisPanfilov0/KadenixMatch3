@@ -1,7 +1,8 @@
+using Entitas;
+
 namespace Code.Gameplay.Features.BoardBuildFeature
 {
-    public class BoardBuildComponent
-    {
-        
-    }
+    // [Game] public class CanFall : IComponent { public int Value; }
+    
+    [Game] public class MaskEmptyCellsToFill : IComponent { public int[,] Value; }
 }

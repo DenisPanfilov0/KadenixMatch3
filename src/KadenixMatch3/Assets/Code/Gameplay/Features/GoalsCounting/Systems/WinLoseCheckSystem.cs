@@ -16,6 +16,8 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
         private readonly IGroup<GameEntity> _goals;
         private readonly Level _lvl;
         private List<GameEntity> _buffer = new(4);
+        private readonly IGroup<GameEntity> _boards;
+        private readonly IGroup<GameEntity> _moves;
 
         public WinLoseCheckSystem(GameContext game, IGameWinOrLoseUIService gameWinOrLoseUIService, IProgressProvider progress)
         {
@@ -27,7 +29,11 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
                     GameMatcher.GoalAmount,
                     GameMatcher.GoalType,
                     GameMatcher.GoalCompleted)
-                .NoneOf(GameMatcher.GameWin));
+                .NoneOf(GameMatcher.GameWin, GameMatcher.GameLose));
+
+            _moves = game.GetGroup(GameMatcher.Moves);
+
+            _boards = game.GetGroup(GameMatcher.BoardState);
             
             _lvl = _progress.ProgressData.ProgressModel.Levels.FirstOrDefault(x =>
                 x.id == _progress.ProgressData.ProgressModel.CurrentLevel);
@@ -35,14 +41,36 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
 
         public void Execute()
         {
-            if (_goals.count == _lvl.goals.Count)
+            foreach (GameEntity move in _moves)
+            foreach (GameEntity board in _boards)
             {
-                _gameWinOrLoseUIService.OpenWinWindow();
-
-                foreach (GameEntity goal in _goals.GetEntities(_buffer))
+                if (board.isBoardActiveInteraction || board.isStopGame)
                 {
-                    goal.isGameWin = true;
+                    return;
                 }
+
+                if (_goals.count == _lvl.goals.Count)
+                {
+                    _gameWinOrLoseUIService.OpenWinWindow();
+
+                    board.isStopGame = true;
+
+                    // foreach (GameEntity goal in _goals.GetEntities(_buffer))
+                    // {
+                    //     goal.isGameWin = true;
+                    // }
+                }
+                else if (move.Moves <= 0)
+                {
+                    _gameWinOrLoseUIService.OpenLoseWindow();
+
+                    board.isStopGame = true;
+
+                    // foreach (GameEntity goal in _goals.GetEntities(_buffer))
+                    // {
+                    //     goal.isGameLose = true;
+                    // }
+                } 
             }
         }
     }

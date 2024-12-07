@@ -17,5 +17,12 @@ namespace Code.Meta.Feature.StartLevel.UI
             GameObject prefab = await assetProvider.Load<GameObject>(goal.Key);
             _icon.sprite = prefab.GetComponent<SpriteRenderer>().sprite;
         }
+        
+        public async void Initialize(string goalType, int goalCount, IAssetProvider assetProvider)
+        {
+            _amount.text = goalCount.ToString();
+            GameObject prefab = await assetProvider.Load<GameObject>(goalType);
+            _icon.sprite = prefab.GetComponent<SpriteRenderer>().sprite;
+        }
     }
 }

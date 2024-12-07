@@ -1,10 +1,6 @@
 using System.Collections.Generic;
 using Code.Gameplay.Features.GoalsCounting.UI;
-using Code.Gameplay.Windows;
-using Code.Progress.Data;
-using Code.Progress.Provider;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.GoalsCounting.Systems
 {
@@ -36,12 +32,15 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
         {
             foreach (GameEntity tileChecking in _tilesChecking.GetEntities(_buffer))
             {
+                tileChecking.isAnimationProcess = true;
+
                 foreach (GameEntity goal in _goals.GetEntities(_bufferGoal))
                 {
                     if (tileChecking.TileType == goal.GoalType)
                     {
                         goal.ReplaceGoalAmount(goal.GoalAmount - 1);
                         _goalsUIService.ChangeGoalCount(tileChecking, 1);
+                        
                         tileChecking.isGoalCheck = false;
 
                         if (goal.GoalAmount == 0)

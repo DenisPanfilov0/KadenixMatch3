@@ -8,6 +8,8 @@ namespace Code.Gameplay.Features.BoardState
         public BoardStateFeature(ISystemFactory systems)
         {
             Add(systems.Create<BoardStateSetupSystem>());
+            
+            Add(systems.Create<CheckBoardActiveSystem>());
         }
     }
 }
