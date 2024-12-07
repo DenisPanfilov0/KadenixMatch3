@@ -23,27 +23,27 @@ MonoBehaviour:
     Durability: 0
     TileType: 0
     Layer: 0
-  - Sprite: {fileID: -4258655140222597813, guid: f1b8adc485e0b3a4cb22221967838db3, type: 3}
+  - Sprite: {fileID: 21300000, guid: f9699883f0ed8428eb3e6aec62b8f1e4, type: 3}
     Type: 3
     Durability: 1
     TileType: 2
     Layer: 10
-  - Sprite: {fileID: -5205004580646574878, guid: d746916215a501f43824a2efbf9a1427, type: 3}
+  - Sprite: {fileID: 21300000, guid: e0a71c73403af443aa1daeb83afb80f7, type: 3}
     Type: 4
     Durability: 1
     TileType: 2
     Layer: 10
-  - Sprite: {fileID: 2511891411316411324, guid: b3eaa5fad84ff334b94174622eaffca4, type: 3}
+  - Sprite: {fileID: 21300000, guid: 55b1932f89b204d699e47b43278efd83, type: 3}
     Type: 5
     Durability: 1
     TileType: 2
     Layer: 10
-  - Sprite: {fileID: -899413195469186476, guid: 4a0ce76c4135bb44fb869148c9ae4f6b, type: 3}
+  - Sprite: {fileID: 21300000, guid: e46a648f58ebe41a1ab9bd7cdfa64ff4, type: 3}
     Type: 6
     Durability: 1
     TileType: 2
     Layer: 10
-  - Sprite: {fileID: 8314926407234240574, guid: ceba39febbe3f824498afd538a1b93b1, type: 3}
+  - Sprite: {fileID: 21300000, guid: 3baf92d0f04044e269f9bea18404e1dc, type: 3}
     Type: 7
     Durability: 1
     TileType: 2

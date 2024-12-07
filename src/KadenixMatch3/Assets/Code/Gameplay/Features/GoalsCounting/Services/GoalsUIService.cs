@@ -13,11 +13,6 @@ namespace Code.Gameplay.Features.GoalsCounting.UI
 
         public void ChangeGoalCount(GameEntity entity, int amount)
         {
-            // if (в зависимости от типа, вызывает на GoalAnimationRegistrar определенную анимацию и ожидаем колбэка)
-            // {
-            //     
-            // }
-
             switch (entity.TileType)
             {
                 case TileTypeId.coloredRed:

@@ -24,5 +24,11 @@ namespace Code.Meta.Feature.Gold.Services
             _progress.ProgressData.ProgressModel.Coins += count;
             GoldChange?.Invoke();
         }
+        
+        public void DecreaseGold(int count)
+        {
+            _progress.ProgressData.ProgressModel.Coins -= count;
+            GoldChange?.Invoke();
+        }
     }
 }

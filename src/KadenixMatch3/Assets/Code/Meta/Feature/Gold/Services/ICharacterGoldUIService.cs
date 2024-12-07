@@ -7,5 +7,6 @@ namespace Code.Meta.Feature.Gold.Services
         int GetCountCoins();
         void IncreaseGold(int count);
         event Action GoldChange;
+        void DecreaseGold(int count);
     }
 }

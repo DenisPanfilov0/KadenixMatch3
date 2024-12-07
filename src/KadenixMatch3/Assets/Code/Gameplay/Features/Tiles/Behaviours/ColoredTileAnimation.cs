@@ -10,10 +10,11 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
         {
             Sequence sequence = DOTween.Sequence();
 
-            sequence.Append(transform.DOScale(Vector3.zero, 3f).SetEase(Ease.OutQuad))
+            sequence.Append(transform.DOScale(Vector3.zero, 1f).SetEase(Ease.OutQuad))
                 .OnComplete(() =>
                 {
                     entity.isDestructed = true;
+                    entity.isAnimationProcess = false;
 
                     if (callback != null)
                     {
