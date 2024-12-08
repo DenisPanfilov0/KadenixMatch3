@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using Code.Common.Entity;
 using Entitas;
 using UnityEngine;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 namespace Code.Gameplay.Features.BoardBuildFeature.Systems
 {
@@ -43,14 +46,17 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
 
         public void Initialize()
         {
+            // Создаем и запускаем Stopwatch
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            
             foreach (var maskEmptyCells in _masksEmptyCells)
             {
                 // Получаем исходную маску
                 var boardMask = maskEmptyCells.maskEmptyCellsToFill.Value;
 
-                // Создаём 10 копий маски и работаем с ними
-                for (int i = 0; i < 20; i++)
-                {
+                // Создаём N копий маски и работаем с ними
+                // for (int i = 0; i < 3; i++)
+                // {
                     // Создаём копию исходной маски
                     var boardMaskCopy = CopyBoardMask(boardMask);
 
@@ -59,8 +65,17 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
 
                     // Выводим обновленную маску в консоль
                     PrintBoardMask(boardMaskCopy);
-                }
+
+                    CreateEntity.Empty()
+                        .AddModifierMaskEmptyCellsToFill(boardMaskCopy);
+                // }
             }
+            
+            // Останавливаем Stopwatch
+            stopwatch.Stop();
+
+            // Выводим затраченное время в консоль
+            UnityEngine.Debug.Log($"Initialize completed in {stopwatch.ElapsedMilliseconds} ms");
         }
 
         // Метод для копирования маски
@@ -277,6 +292,26 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
             Debug.Log(output.ToString());
         }
 
+        private string FormatValue(int value)
+        {
+            string color = value switch
+            {
+                -1 => "black",
+                1 => "blue",
+                2 => "red",
+                3 => "yellow",
+                4 => "green",
+                5 => "purple",
+                _ => "white",
+            };
+        
+            // Используем символ "■" для квадратиков, увеличиваем размер в 3 раза и уменьшаем расстояние
+            string coloredValue = $"<color={color}><b><size=150%>■</size></b></color>";
+        
+            // Уменьшаем расстояние между квадратиками в 2 раза
+            return coloredValue;
+        }
+        
         // private string FormatValue(int value)
         // {
         //     string color = value switch
@@ -290,29 +325,9 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
         //         _ => "white",
         //     };
         //
-        //     // Используем символ "■" для квадратиков, увеличиваем размер в 3 раза и уменьшаем расстояние
-        //     string coloredValue = $"<color={color}><b><size=150%>■</size></b></color>";
-        //
-        //     // Уменьшаем расстояние между квадратиками в 2 раза
-        //     return coloredValue;
+        //     string coloredValue = $"<color={color}><b>{value,10}</b></color>";
+        //     return $"  {coloredValue}  ";
         // }
-        
-        private string FormatValue(int value)
-        {
-            string color = value switch
-            {
-                -1 => "black",
-                1 => "blue",
-                2 => "red",
-                3 => "yellow",
-                4 => "green",
-                5 => "purple",
-                _ => "white",
-            };
-
-            string coloredValue = $"<color={color}><b>{value,10}</b></color>";
-            return $"  {coloredValue}  ";
-        }
 
     }
 }

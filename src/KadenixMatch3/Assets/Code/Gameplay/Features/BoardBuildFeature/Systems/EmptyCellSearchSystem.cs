@@ -68,21 +68,66 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
                 .AddMaskEmptyCellsToFill(_boardMask);
 
             // Вывод маски в консоль для отладки
-            // PrintBoardMask();
+            PrintBoardMask(_boardMask);
         }
 
-        private void PrintBoardMask()
+        private void PrintBoardMask(int[,] boardMask)
         {
-            for (int y = BoardHeight - 1; y >= 0; y--)
+            int width = boardMask.GetLength(0);
+            int height = boardMask.GetLength(1);
+
+            System.Text.StringBuilder output = new System.Text.StringBuilder();
+
+            for (int y = height - 1; y >= 0; y--)
             {
-                string row = "";
-                for (int x = 0; x < BoardWidth; x++)
+                for (int x = 0; x < width; x++)
                 {
-                    row += $"{_boardMask[x, y],2} ";
+                    int value = boardMask[x, y];
+                    string formattedValue = FormatValue(value);
+                    output.Append(formattedValue);
                 }
-                Debug.Log(row);
+                output.AppendLine();
             }
+
+            Debug.Log(output.ToString());
         }
+
+        private string FormatValue(int value)
+        {
+            string color = value switch
+            {
+                -1 => "black",
+                1 => "blue",
+                2 => "red",
+                3 => "yellow",
+                4 => "green",
+                5 => "purple",
+                _ => "white",
+            };
+        
+            // Используем символ "■" для квадратиков, увеличиваем размер в 3 раза и уменьшаем расстояние
+            string coloredValue = $"<color={color}><b><size=150%>■</size></b></color>";
+        
+            // Уменьшаем расстояние между квадратиками в 2 раза
+            return coloredValue;
+        }
+        
+        // private string FormatValue(int value)
+        // {
+        //     string color = value switch
+        //     {
+        //         -1 => "black",
+        //         1 => "blue",
+        //         2 => "red",
+        //         3 => "yellow",
+        //         4 => "green",
+        //         5 => "purple",
+        //         _ => "white",
+        //     };
+        //
+        //     string coloredValue = $"<color={color}><b>{value,10}</b></color>";
+        //     return $"  {coloredValue}  ";
+        // }
 
         private Dictionary<TileTypeId, int> _tileMaskType = new()
         {
