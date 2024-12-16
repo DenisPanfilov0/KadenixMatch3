@@ -19,7 +19,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     GameMatcher.WorldPosition,
                     GameMatcher.PowerUpBombAndBomb,
                     GameMatcher.ActiveInteraction)
-                .NoneOf(GameMatcher.InteractionDelay));
+                .NoneOf(GameMatcher.InteractionDelay, GameMatcher.AnimationProcess));
         }
 
         public void Execute()
@@ -69,6 +69,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                 {
                     tile.ReplaceDamageReceived(tile.DamageReceived + 1);
                     tile.isActiveInteraction = true;
+                    tile.isGoalCheck = true;
                 }
 
                 // Анимация уничтожения тайла

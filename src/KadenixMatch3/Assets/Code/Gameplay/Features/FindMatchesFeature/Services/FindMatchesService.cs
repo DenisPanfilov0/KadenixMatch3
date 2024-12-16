@@ -32,6 +32,22 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services
                     //     entity.AddPowerUpFigureType(figure.Value);
                     // }
 
+                    // foreach (var entities in tilesEntities.Keys)
+                    // {
+                    //     if (entities.All(x => !x.hasPowerUpFigureType))
+                    //     {
+                    //         entity.ReplacePowerUpFigureType(tilesEntities.First().Value);
+                    //         return tilesEntities;
+                    //     }
+                    //
+                    //     // entities.FirstOrDefault(x => !x.hasPowerUpFigureType);
+                    //     // {
+                    //         // entity.ReplacePowerUpFigureType(tilesEntities.First().Value);
+                    //         // return tilesEntities;
+                    //     // }
+                    // }
+                    
+
                     entity.ReplacePowerUpFigureType(tilesEntities.First().Value);
                     return tilesEntities;
                 }
@@ -110,10 +126,11 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services
                 }
             }
 
-            // foreach (var tile in matches)
-            // {
-            //     tile.isSelectTileResearchMatches = true;
-            // }
+            foreach (var tile in matches)
+            {
+                // tile.isSelectTileResearchMatches = true;
+                // tile.isFindMatchesProcess = true;
+            }
 
             return matches;
         }

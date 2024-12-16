@@ -89,7 +89,7 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
                 output.AppendLine();
             }
 
-            Debug.Log(output.ToString());
+            // Debug.Log(output.ToString());
         }
 
         private string FormatValue(int value)

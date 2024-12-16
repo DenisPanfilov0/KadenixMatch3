@@ -89,39 +89,43 @@ public static class GameComponentsLookup {
     public const int GoalAmount = 78;
     public const int GoalCheck = 79;
     public const int GoalCompleted = 80;
-    public const int GoalType = 81;
-    public const int FirstSelectPowerUpSwipe = 82;
-    public const int FirstSelectTileSwipe = 83;
-    public const int SecondSelectPowerUpSwipe = 84;
-    public const int SecondSelectTileSwipe = 85;
-    public const int SwipeDirection = 86;
-    public const int TileSwipeProcessed = 87;
-    public const int AutoActiveTile = 88;
-    public const int PowerUpFigureType = 89;
-    public const int PowerUpGenerated = 90;
-    public const int PowerUpSpawnAnimation = 91;
-    public const int TileForPowerUpGeneration = 92;
-    public const int TileForPowerUpGenerationByType = 93;
-    public const int CharacterSkillActivationRequest = 94;
-    public const int CharacterSkillProcessed = 95;
-    public const int CrossDestructionSkillRequest = 96;
-    public const int HandSkillRequest = 97;
-    public const int SwapSkillRequest = 98;
-    public const int TileNotActivatedAfterSwap = 99;
-    public const int TilesSkillSwap = 100;
-    public const int SpawnerTilesPool = 101;
-    public const int ColoredTileAnimation = 102;
-    public const int AccelerationTime = 103;
-    public const int CanFall = 104;
-    public const int EndFalling = 105;
-    public const int FallDelay = 106;
-    public const int FallDirection = 107;
-    public const int FallingSpeed = 108;
-    public const int ProcessedFalling = 109;
-    public const int SpeedFall = 110;
-    public const int StartedFalling = 111;
+    public const int GoalCreateProcess = 81;
+    public const int GoalType = 82;
+    public const int FirstSelectPowerUpSwipe = 83;
+    public const int FirstSelectTileSwipe = 84;
+    public const int SecondSelectPowerUpSwipe = 85;
+    public const int SecondSelectTileSwipe = 86;
+    public const int SwipeDirection = 87;
+    public const int TileSwipeProcessed = 88;
+    public const int AutoActiveTile = 89;
+    public const int PowerUpFigureType = 90;
+    public const int PowerUpGenerated = 91;
+    public const int PowerUpSpawnAnimation = 92;
+    public const int TileForPowerUpGeneration = 93;
+    public const int TileForPowerUpGenerationByType = 94;
+    public const int CharacterSkillActivationRequest = 95;
+    public const int CharacterSkillProcessed = 96;
+    public const int CrossDestructionSkillRequest = 97;
+    public const int HandSkillRequest = 98;
+    public const int SwapSkillRequest = 99;
+    public const int TileNotActivatedAfterSwap = 100;
+    public const int TilesSkillSwap = 101;
+    public const int SpawnerTilesPool = 102;
+    public const int ColoredTileAnimation = 103;
+    public const int PowerUpBombAnimation = 104;
+    public const int PowerUpHorizontalRocketAnimation = 105;
+    public const int PowerUpVerticalRocketAnimation = 106;
+    public const int AccelerationTime = 107;
+    public const int CanFall = 108;
+    public const int EndFalling = 109;
+    public const int FallDelay = 110;
+    public const int FallDirection = 111;
+    public const int FallingSpeed = 112;
+    public const int ProcessedFalling = 113;
+    public const int SpeedFall = 114;
+    public const int StartedFalling = 115;
 
-    public const int TotalComponents = 112;
+    public const int TotalComponents = 116;
 
     public static readonly string[] componentNames = {
         "AddViewProcess",
@@ -205,6 +209,7 @@ public static class GameComponentsLookup {
         "GoalAmount",
         "GoalCheck",
         "GoalCompleted",
+        "GoalCreateProcess",
         "GoalType",
         "FirstSelectPowerUpSwipe",
         "FirstSelectTileSwipe",
@@ -227,6 +232,9 @@ public static class GameComponentsLookup {
         "TilesSkillSwap",
         "SpawnerTilesPool",
         "ColoredTileAnimation",
+        "PowerUpBombAnimation",
+        "PowerUpHorizontalRocketAnimation",
+        "PowerUpVerticalRocketAnimation",
         "AccelerationTime",
         "CanFall",
         "EndFalling",
@@ -320,6 +328,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.GoalsCounting.GoalAmount),
         typeof(Code.Gameplay.Features.GoalsCounting.GoalCheck),
         typeof(Code.Gameplay.Features.GoalsCounting.GoalCompleted),
+        typeof(Code.Gameplay.Features.GoalsCounting.GoalCreateProcess),
         typeof(Code.Gameplay.Features.GoalsCounting.GoalType),
         typeof(Code.Gameplay.Features.Input.FirstSelectPowerUpSwipe),
         typeof(Code.Gameplay.Features.Input.FirstSelectTileSwipe),
@@ -342,6 +351,9 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.SkillCharacter.TilesSkillSwap),
         typeof(Code.Gameplay.Features.TileGenerationFeature.SpawnerTilesPool),
         typeof(Code.Gameplay.Features.Tiles.ColoredTileAnimationComponent),
+        typeof(Code.Gameplay.Features.Tiles.PowerUpBombAnimationComponent),
+        typeof(Code.Gameplay.Features.Tiles.PowerUpHorizontalRocketAnimationComponent),
+        typeof(Code.Gameplay.Features.Tiles.PowerUpVerticalRocketAnimationComponent),
         typeof(Code.Gameplay.Features.TilesFallFeature.AccelerationTime),
         typeof(Code.Gameplay.Features.TilesFallFeature.CanFall),
         typeof(Code.Gameplay.Features.TilesFallFeature.EndFalling),

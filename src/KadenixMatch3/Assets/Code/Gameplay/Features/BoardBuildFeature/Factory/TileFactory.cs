@@ -222,6 +222,7 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Factory
                     .With(x => x.isTransparentToMatch = true)
                     .With(x => x.isNotMovable = true)
                     .With(x => x.isInactiveStartState = true)
+                    // .With(x => x.isIndirectInteractable = true) --- если вдруг лёд станет восприимчив к интеракциям рядом уничтоженных кристаллов
                 ;
         }
     }

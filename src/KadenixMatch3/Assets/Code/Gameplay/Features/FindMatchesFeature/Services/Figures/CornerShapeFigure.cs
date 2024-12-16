@@ -8,10 +8,43 @@ namespace Sources.TilesContext.Services.FindMatches.FigureFinder
 {
     public class CornerShapeFigure : BaseFigureType
     {
+        private static readonly Dictionary<string, Vector2Int[]> ShapeMasks = new()
+        {
+            // Угловые фигуры
+            { "1", new[] { Vector2Int.up, Vector2Int.up * 2, Vector2Int.up * 2 + Vector2Int.right, Vector2Int.up * 2 + Vector2Int.right * 2 } },
+            { "2", new[] { Vector2Int.up, Vector2Int.down, Vector2Int.up + Vector2Int.right, Vector2Int.up + Vector2Int.right * 2 } },
+            { "3", new[] { Vector2Int.down, Vector2Int.down * 2, Vector2Int.right, Vector2Int.right * 2 } },
+            { "4", new[] { Vector2Int.right, Vector2Int.left, Vector2Int.left + Vector2Int.down, Vector2Int.left + Vector2Int.down * 2 } },
+            { "5", new[] { Vector2Int.left, Vector2Int.left * 2, Vector2Int.left * 2 + Vector2Int.down, Vector2Int.left * 2 + Vector2Int.down * 2 } },
+            
+            { "6", new[] { Vector2Int.up, Vector2Int.up * 2, Vector2Int.up * 2 + Vector2Int.left, Vector2Int.up * 2 + Vector2Int.left * 2 } },
+            { "7", new[] { Vector2Int.up, Vector2Int.down, Vector2Int.up + Vector2Int.left, Vector2Int.up + Vector2Int.left * 2 } },
+            { "8", new[] { Vector2Int.down, Vector2Int.down * 2, Vector2Int.left, Vector2Int.left * 2 } },
+            { "9", new[] { Vector2Int.right + Vector2Int.down, Vector2Int.right + Vector2Int.down * 2, Vector2Int.left, Vector2Int.right } },
+            { "10", new[] { Vector2Int.right, Vector2Int.right * 2, Vector2Int.right * 2 + Vector2Int.down, Vector2Int.right * 2 + Vector2Int.down * 2 } },
+            
+            { "11", new[] { Vector2Int.right, Vector2Int.right * 2, Vector2Int.right * 2 + Vector2Int.up, Vector2Int.right * 2 + Vector2Int.up * 2 } },
+            { "12", new[] { Vector2Int.left, Vector2Int.right, Vector2Int.right + Vector2Int.up, Vector2Int.right + Vector2Int.up * 2 } },
+            { "13", new[] { Vector2Int.left, Vector2Int.left, Vector2Int.up, Vector2Int.up * 2 } },
+            { "14", new[] { Vector2Int.up, Vector2Int.down, Vector2Int.down + Vector2Int.left, Vector2Int.down + Vector2Int.left * 2 } },
+            { "15", new[] { Vector2Int.down, Vector2Int.down * 2, Vector2Int.down * 2 + Vector2Int.left, Vector2Int.down * 2 + Vector2Int.left * 2 } },
+            
+            { "16", new[] { Vector2Int.down, Vector2Int.down * 2, Vector2Int.down * 2 + Vector2Int.right, Vector2Int.down * 2 + Vector2Int.right * 2 } },
+            { "17", new[] { Vector2Int.up, Vector2Int.down, Vector2Int.down + Vector2Int.right, Vector2Int.down + Vector2Int.right * 2 } },
+            { "18", new[] { Vector2Int.up, Vector2Int.up * 2, Vector2Int.right, Vector2Int.right * 2 } },
+            { "19", new[] { Vector2Int.right, Vector2Int.left, Vector2Int.left + Vector2Int.up, Vector2Int.left + Vector2Int.up * 2 } },
+            { "20", new[] { Vector2Int.left, Vector2Int.left * 2, Vector2Int.left * 2 + Vector2Int.up, Vector2Int.left * 2 + Vector2Int.up * 2 } },
+        };
+        
         public static Dictionary<List<GameEntity>, FigureTypeId> GetFigureTiles(List<GameEntity> tiles)
         {
             foreach (var tile in tiles)
             {
+                if (!tile.hasIdenticalTilesForMatche)
+                {
+                    continue;
+                }
+                
                 var tileGroup = TryGetShapeCenter(tile);
                 if (tileGroup != null)
                 {
@@ -47,52 +80,29 @@ namespace Sources.TilesContext.Services.FindMatches.FigureFinder
 
         private static List<GameEntity> TryGetShapeCenter(GameEntity tile)
         {
-            if (
-                tile.hasBoardPosition &&
-                TryGetNeighbor(tile, Vector2Int.up, out var top1) &&
-                TryGetNeighbor(top1, Vector2Int.up, out var top2) &&
-                TryGetNeighbor(tile, Vector2Int.right, out var right1) &&
-                TryGetNeighbor(right1, Vector2Int.right, out var right2) &&
-                AreContentTypesSame(tile, top1, top2, right1, right2)
-            )
-            {
-                return new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition), top1, top2, right1, right2 };
-            }
+            if (!tile.hasBoardPosition)
+                return null;
 
-            if (
-                tile.hasBoardPosition &&
-                TryGetNeighbor(tile, Vector2Int.down, out var bottom3) &&
-                TryGetNeighbor(bottom3, Vector2Int.down, out var bottom4) &&
-                TryGetNeighbor(tile, Vector2Int.right, out var right3) &&
-                TryGetNeighbor(right3, Vector2Int.right, out var right4) &&
-                AreContentTypesSame(tile, bottom3, bottom4, right3, right4)
-            )
+            foreach (var mask in ShapeMasks.Values)
             {
-                return new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition), bottom3, bottom4, right3, right4 };
-            }
+                var matchingTiles = new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition) };
+                var isMatch = true;
 
-            if (
-                tile.hasBoardPosition &&
-                TryGetNeighbor(tile, Vector2Int.down, out var bottom1) &&
-                TryGetNeighbor(bottom1, Vector2Int.down, out var bottom2) &&
-                TryGetNeighbor(tile, Vector2Int.left, out var left3) &&
-                TryGetNeighbor(left3, Vector2Int.left, out var left4) &&
-                AreContentTypesSame(tile, bottom1, bottom2, left3, left4)
-            )
-            {
-                return new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition), bottom1, bottom2, left3, left4 };
-            }
+                foreach (var offset in mask)
+                {
+                    if (TryGetNeighbor(tile, offset, out var neighbor) && AreContentTypesSame(tile, neighbor))
+                    {
+                        matchingTiles.Add(neighbor);
+                    }
+                    else
+                    {
+                        isMatch = false;
+                        break;
+                    }
+                }
 
-            if (
-                tile.hasBoardPosition &&
-                TryGetNeighbor(tile, Vector2Int.up, out var top3) &&
-                TryGetNeighbor(top3, Vector2Int.up, out var top4) &&
-                TryGetNeighbor(tile, Vector2Int.left, out var left1) &&
-                TryGetNeighbor(left1, Vector2Int.left, out var left2) &&
-                AreContentTypesSame(tile, top3, top4, left1, left2)
-            )
-            {
-                return new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition), top3, top4, left1, left2 };
+                if (isMatch)
+                    return matchingTiles;
             }
 
             return null;

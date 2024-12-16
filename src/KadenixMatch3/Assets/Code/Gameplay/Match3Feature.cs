@@ -36,11 +36,13 @@ namespace Code.Gameplay
       
       Add(systems.Create<PowerUpGeneratedFeature>());
       
+      
+      Add(systems.Create<GoalsCountingFeature>());
+
       Add(systems.Create<ActiveInteractionFeature>());
       
       Add(systems.Create<CountingMovesFeature>());
       
-      Add(systems.Create<GoalsCountingFeature>());
       
       Add(systems.Create<BindingTilesFeature>());
       Add(systems.Create<TilesFallFeature>());

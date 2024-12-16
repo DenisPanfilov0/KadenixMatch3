@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 5391201536312418287}
   - component: {fileID: 1909559306608571613}
   - component: {fileID: -4701020360810882370}
-  - component: {fileID: -6589901547690372160}
-  - component: {fileID: 4547028555350322209}
+  - component: {fileID: 5103866323764985601}
+  - component: {fileID: -4707626278959992754}
   m_Layer: 0
   m_Name: powerUpHorizontalRocket
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.163166, y: 9.952156, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayerID: 592744411
   m_SortingLayer: 1
   m_SortingOrder: 6
-  m_Sprite: {fileID: 2511891411316411324, guid: b3eaa5fad84ff334b94174622eaffca4, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.5058824, a: 1}
+  m_Sprite: {fileID: -4955736626584017273, guid: ef14f4e85c9a3ad42973619bbda1bbbc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityView: {fileID: 7288713654061421946}
   PowerUpTileTweenAnimation: {fileID: 1909559306608571613}
---- !u!114 &-6589901547690372160
+--- !u!114 &5103866323764985601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,10 +182,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7727566088041989992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de358a67a8f459a98aaae7960c20cfe, type: 3}
+  m_Script: {fileID: 11500000, guid: a4487884df1c402fb3d91dbaf7b81300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4547028555350322209
+  _explosionPartical: {fileID: 0}
+--- !u!114 &-4707626278959992754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,8 +195,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7727566088041989992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90194ba5eb3a421d9463a15b41c311d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c14a3b7ed67437282810016a2cbb8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 7288713654061421946}
-  ColoredTileAnimation: {fileID: -6589901547690372160}
+  PowerUpHorizontalRocketAnimation: {fileID: 5103866323764985601}

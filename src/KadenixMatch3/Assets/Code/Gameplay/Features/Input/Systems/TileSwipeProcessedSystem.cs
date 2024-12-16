@@ -53,6 +53,7 @@ namespace Code.Gameplay.Features.Input.Systems
                         if (!tileSwiping.isTileNotActivatedAfterSwap)
                         {
                             tileSwiping.isActiveInteraction = true;
+                            tileSwiping.isGoalCheck = true;
                         }
                         else
                         {

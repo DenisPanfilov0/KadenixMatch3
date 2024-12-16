@@ -47,11 +47,12 @@ namespace Code.Infrastructure.View.Factory
     
     public async Task<EntityBehaviour> CreateViewForEntityFromAddressPrefab(GameEntity entity)
     {
-      var prefab = await _assetProvider.Load<GameObject>(entity.ViewAddress);
+      GameObject prefab = await _assetProvider.Load<GameObject>(entity.ViewAddress);
       EntityBehaviour view = _instantiator.InstantiatePrefabForComponent<EntityBehaviour>(
         prefab,
         position: entity.WorldPosition,
-        Quaternion.identity,
+        // Quaternion.identity,
+        prefab.transform.rotation, // Сохраняем угол поворота префаба
         parentTransform: null);
 
       view.SetEntity(entity);

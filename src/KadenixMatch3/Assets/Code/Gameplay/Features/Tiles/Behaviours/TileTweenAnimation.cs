@@ -92,6 +92,7 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                 {
                     // Завершение анимации, если нужно выполнить дополнительные действия после
                     entity.isActiveInteraction = true;
+                    entity.isGoalCheck = true;
                     // entity.isDestructed = true;
                 });
 
@@ -157,6 +158,7 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                     if (entity.isAutoActiveTile)
                     {
                         entity.isActiveInteraction = true;
+                        entity.isGoalCheck = true;
                     }
                 });
         }
