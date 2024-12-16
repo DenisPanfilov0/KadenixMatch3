@@ -6,10 +6,23 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services.Figures
 {
     public class LineFourVerticalShapeFigure : BaseFigureType
     {
+        private static readonly Dictionary<string, Vector2Int[]> ShapeMasks = new()
+        {
+            { "1", new[] { Vector2Int.down, Vector2Int.down * 2, Vector2Int.down * 3 } },
+            { "2", new[] { Vector2Int.up, Vector2Int.down, Vector2Int.down * 2 } },
+            { "3", new[] { Vector2Int.up, Vector2Int.up * 2, Vector2Int.down } },
+            { "4", new[] { Vector2Int.up, Vector2Int.up * 2, Vector2Int.up * 3 } },
+        };
+        
         public static Dictionary<List<GameEntity>, FigureTypeId> GetFigureTiles(List<GameEntity> tiles)
         {
             foreach (var tile in tiles)
             {
+                if (!tile.hasIdenticalTilesForMatche)
+                {
+                    continue;
+                }
+                
                 var tileGroup = TryGetShapeCenter(tile);
                 if (tileGroup != null)
                 {
@@ -43,26 +56,29 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services.Figures
 
         private static List<GameEntity> TryGetShapeCenter(GameEntity tile)
         {
-            if (
-                tile.hasBoardPosition &&
-                TryGetNeighbor(tile, Vector2Int.up, out var top1) &&
-                TryGetNeighbor(top1, Vector2Int.up, out var top2) &&
-                TryGetNeighbor(tile, Vector2Int.down, out var bottom3) &&
-                AreContentTypesSame(tile, top1, top2, bottom3)
-            )
-            {
-                return new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition), top1, top2, bottom3 };
-            }
+            if (!tile.hasBoardPosition)
+                return null;
 
-            if (
-                tile.hasBoardPosition &&
-                TryGetNeighbor(tile, Vector2Int.up, out var top) &&
-                TryGetNeighbor(tile, Vector2Int.down, out var bottom1) &&
-                TryGetNeighbor(bottom1, Vector2Int.down, out var bottom2) &&
-                AreContentTypesSame(tile, top, bottom1, bottom2)
-            )
+            foreach (var mask in ShapeMasks.Values)
             {
-                return new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition), top, bottom1, bottom2 };
+                var matchingTiles = new List<GameEntity> { TileUtilsExtensions.GetTopTileByPosition(tile.BoardPosition) };
+                var isMatch = true;
+
+                foreach (var offset in mask)
+                {
+                    if (TryGetNeighbor(tile, offset, out var neighbor) && AreContentTypesSame(tile, neighbor))
+                    {
+                        matchingTiles.Add(neighbor);
+                    }
+                    else
+                    {
+                        isMatch = false;
+                        break;
+                    }
+                }
+
+                if (isMatch)
+                    return matchingTiles;
             }
 
             return null;

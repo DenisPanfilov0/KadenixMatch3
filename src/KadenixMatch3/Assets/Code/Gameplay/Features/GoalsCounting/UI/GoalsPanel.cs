@@ -34,14 +34,16 @@ namespace Code.Gameplay.Features.GoalsCounting.UI
 
         private void Start()
         {
-            GoalsFill();
+            // GoalsFill();
 
             _goalsUIService.OnChangeGoal += ChangeGoal;
+            _goalsUIService.OnCreateGoal += CreateGoal;
         }
 
         private void OnDestroy()
         {
             _goalsUIService.OnChangeGoal -= ChangeGoal;
+            _goalsUIService.OnCreateGoal -= CreateGoal;
         }
 
         private async Task GoalsFill()
@@ -56,6 +58,16 @@ namespace Code.Gameplay.Features.GoalsCounting.UI
                 goalItem.Setup(TileTypeParserExtensions.TileTypeResolve(goal.Key), goal.Value);
                 _items.Add(goalItem);
             }
+        }
+
+        private async void CreateGoal(KeyValuePair<string, int> goal)
+        {
+            GameObject goalPrefab = await _assetProvider.Load<GameObject>("goal");
+            GoalItem goalItem = _instantiator.InstantiatePrefabForComponent<GoalItem>(goalPrefab, _container);
+            goalItem.Setup(TileTypeParserExtensions.TileTypeResolve(goal.Key), goal.Value);
+            _items.Add(goalItem);
+            
+            _goalsUIService.AddGoalInPool(goalItem);
         }
 
         private void ChangeGoal(TileTypeId typeId, int amount)

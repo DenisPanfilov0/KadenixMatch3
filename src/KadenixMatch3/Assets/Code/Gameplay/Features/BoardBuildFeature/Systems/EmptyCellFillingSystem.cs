@@ -206,7 +206,7 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
 
                     if (matchFound)
                     {
-                        Debug.Log($"Figure matched: {figure.Key}");
+                        // Debug.Log($"Figure matched: {figure.Key}");
                         return true;  // Фигура найдена
                     }
                 }
@@ -289,7 +289,7 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
                 output.AppendLine();
             }
 
-            Debug.Log(output.ToString());
+            // Debug.Log(output.ToString());
         }
 
         private string FormatValue(int value)

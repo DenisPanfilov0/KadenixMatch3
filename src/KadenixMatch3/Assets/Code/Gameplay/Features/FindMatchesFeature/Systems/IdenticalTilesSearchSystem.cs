@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Code.Gameplay.Features.FindMatchesFeature.Services;
@@ -26,6 +27,11 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Systems
         {
             foreach (GameEntity matchable in _matchables.GetEntities(_buffer))
             {
+                if (matchable == null || !matchable.isFindMatches)
+                {
+                    continue;
+                }
+                
                 List<GameEntity> tiles = _findMatchesService.FindIdenticalTiles(matchable);
 
                 if (tiles != null && tiles.Count <= 2)
@@ -59,7 +65,9 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Systems
 
                 if (mainTile == null)
                 {
-                    mainTile = tiles.FirstOrDefault(x => x.isFindMatches);
+                    mainTile = tiles.Where(x => x.isFindMatches)
+                        .OrderBy(_ => Guid.NewGuid())
+                        .FirstOrDefault();
                 }
 
                 if (tiles.Count >= 3 && !mainTile.isTileGroupConvergeForBooster)
@@ -69,6 +77,11 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Systems
                     foreach (var tilePosition in tiles)
                     {
                         allTilePosition.Add(tilePosition.BoardPosition);
+                    }
+
+                    foreach (var tile in tiles)
+                    {
+                        tile.isFindMatches = false;
                     }
                     
                     mainTile.ReplaceIdenticalTilesForMatche(allTilePosition);

@@ -70,7 +70,6 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                 });
         }
         
-        
         public void MagicBallAndPowerUpActiveAnimation(List<GameEntity> crystalTiles, GameEntity firstTileEntity, GameEntity secondTileEntity)
         {
             var firstTileTransform = firstTileEntity.Transform;
@@ -129,7 +128,6 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                     });
                 });
         }
-
         
         public void MagicBallAndMagicBallActiveAnimation(List<GameEntity> tilesActivation, GameEntity firstTileEntity, GameEntity secondTileEntity)
         {

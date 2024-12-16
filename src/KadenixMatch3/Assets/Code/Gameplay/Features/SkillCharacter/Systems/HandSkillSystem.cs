@@ -37,6 +37,7 @@ namespace Code.Gameplay.Features.SkillCharacter.Systems
                 {
                     entity.ReplaceDamageReceived(entity.DamageReceived + 1);
                     entity.isActiveInteraction = true;
+                    entity.isGoalCheck = true;
 
                     skill.isCharacterSkillActivationRequest = false;
                     skill.isCharacterSkillProcessed = false;

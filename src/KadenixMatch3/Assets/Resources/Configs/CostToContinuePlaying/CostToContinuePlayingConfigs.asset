@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CostToContinuePlayingConfigs
   m_EditorClassIdentifier: Assembly-CSharp:Code.Gameplay.Features.GoalsCounting.Configs:CostToContinuePlayingConfig
   CostToContinuePlayingsConfigs:
+  - Cost: 100
+  - Cost: 200
   - Cost: 300
-  - Cost: 600
-  - Cost: 900
+  CurrentNumberIteration: 0
