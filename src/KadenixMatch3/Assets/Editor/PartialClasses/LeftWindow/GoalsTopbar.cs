@@ -13,7 +13,7 @@ public partial class LevelDesignerWindow : EditorWindow
 
     // Расстояние между ячейками
     private float cellSpacing = 20;
-    
+
     // Список для хранения значений инпут полей
     private List<string> topBarGoalsValues = new List<string>();
     // private List<string> GeneratorValues = new List<string>();
@@ -22,7 +22,7 @@ public partial class LevelDesignerWindow : EditorWindow
     {
         float topBarWidth = 5 * cellSize;
         float topBarHeight = cellSize;
-        float inputFieldHeight = 20f;  // Высота для инпут полей
+        float inputFieldHeight = 20f; // Высота для инпут полей
 
         float offsetX = (gridSize * cellSize - topBarWidth) / 2f;
 
@@ -30,7 +30,8 @@ public partial class LevelDesignerWindow : EditorWindow
         for (int i = 0; i < currentGoalCount; i++)
         {
             // Смещаем ячейку с учётом inputFieldVerticalOffset
-            Rect topBarCellRect = new Rect(startX + offsetX + i * (cellSize + cellSpacing), startY + inputFieldVerticalOffset, cellSize, topBarHeight);
+            Rect topBarCellRect = new Rect(startX + offsetX + i * (cellSize + cellSpacing),
+                startY + inputFieldVerticalOffset, cellSize, topBarHeight);
 
             // Рисуем ячейку
             if (openedHotbarIndices.Contains(i))
@@ -51,38 +52,44 @@ public partial class LevelDesignerWindow : EditorWindow
 
             // Кнопка "+"
             if (GUI.Button(topBarCellRect, "+", new GUIStyle()
-            {
-                alignment = TextAnchor.MiddleCenter,
-                fontSize = 18,
-                normal = { textColor = Color.white },
-                fontStyle = FontStyle.Bold
-            }))
+                {
+                    alignment = TextAnchor.MiddleCenter,
+                    fontSize = 18,
+                    normal = { textColor = Color.white },
+                    fontStyle = FontStyle.Bold
+                }))
             {
                 HandleGoalsTopBarClick(i);
             }
 
             // Крестик в правом верхнем углу ячейки
-            Rect closeButtonRect = new Rect(topBarCellRect.x + topBarCellRect.width + cellSpacing - 18, topBarCellRect.y, 20, 20);
+            Rect closeButtonRect = new Rect(topBarCellRect.x + topBarCellRect.width + cellSpacing - 18,
+                topBarCellRect.y, 20, 20);
 
             GUIStyle closeButtonStyle = new GUIStyle(GUI.skin.button)
             {
-                fontSize = 32,  // Увеличиваем размер шрифта для крестика
-                fontStyle = FontStyle.Bold,  // Жирный шрифт
-                normal = { background = MakeTexture(1, 1, Color.white), textColor = Color.red },  // Белый фон и красный текст
-                alignment = TextAnchor.MiddleCenter,  // Выравнивание по центру
-                stretchWidth = true,  // Чтобы кнопка занимала всю ширину
-                stretchHeight = true  // Чтобы кнопка занимала всю высоту
+                fontSize = 32, // Увеличиваем размер шрифта для крестика
+                fontStyle = FontStyle.Bold, // Жирный шрифт
+                normal =
+                {
+                    background = MakeTexture(1, 1, Color.white), textColor = Color.red
+                }, // Белый фон и красный текст
+                alignment = TextAnchor.MiddleCenter, // Выравнивание по центру
+                stretchWidth = true, // Чтобы кнопка занимала всю ширину
+                stretchHeight = true // Чтобы кнопка занимала всю высоту
             };
 
             // Рисуем кнопку крестика
             if (GUI.Button(closeButtonRect, "×", closeButtonStyle))
             {
-                HandleRemoveGoal(i);  // Обработчик удаления цели
+                HandleRemoveGoal(i); // Обработчик удаления цели
             }
 
             // Создаем инпут поле под ячейкой
-            Rect inputFieldRect = new Rect(startX + offsetX + i * (cellSize + cellSpacing), startY + topBarHeight + inputFieldVerticalOffset, cellSize, inputFieldHeight);
-            string inputValue = topBarGoalsValues.Count > i ? topBarGoalsValues[i] : "0"; // Получаем текущее значение или 0
+            Rect inputFieldRect = new Rect(startX + offsetX + i * (cellSize + cellSpacing),
+                startY + topBarHeight + inputFieldVerticalOffset, cellSize, inputFieldHeight);
+            string inputValue =
+                topBarGoalsValues.Count > i ? topBarGoalsValues[i] : "0"; // Получаем текущее значение или 0
 
             // Ограничиваем ввод только положительными числами
             string newInputValue = EditorGUI.TextField(inputFieldRect, inputValue);
@@ -163,60 +170,94 @@ public partial class LevelDesignerWindow : EditorWindow
         isWindowOpen = true;
     }
 
+    private Vector2 scrollPosition;
+
     private void DrawWindow()
     {
         if (isWindowOpen)
         {
-            EditorGUI.DrawRect(windowRect, new Color(0f, 0f, 0f, 0.8f));
-            Handles.DrawSolidRectangleWithOutline(windowRect, new Color(0f, 0f, 0f, 0.8f), Color.white);
+            // Увеличиваем размеры окна
+            Rect expandedWindowRect =
+                new Rect(windowRect.x, windowRect.y, windowRect.width + 200, windowRect.height + 300);
 
-            Rect closeButtonRect = new Rect(windowRect.x + windowRect.width - 30, windowRect.y + 10, 20, 20);
-            if (GUI.Button(closeButtonRect, "X", new GUIStyle() { fontSize = 16, normal = { textColor = Color.white } }))
+            // Рисуем фон окна
+            EditorGUI.DrawRect(expandedWindowRect, new Color(0f, 0f, 0f, 0.8f));
+            Handles.DrawSolidRectangleWithOutline(expandedWindowRect, new Color(0f, 0f, 0f, 0.8f), Color.white);
+
+            // Кнопка закрытия
+            Rect closeButtonRect = new Rect(expandedWindowRect.x + expandedWindowRect.width - 30,
+                expandedWindowRect.y + 10, 20, 20);
+            if (GUI.Button(closeButtonRect, "X",
+                    new GUIStyle() { fontSize = 16, normal = { textColor = Color.white } }))
             {
                 CloseWindow();
             }
 
-            DrawTileSelection();
+            // Скроллируемая область
+            Rect scrollRect = new Rect(expandedWindowRect.x + 10, expandedWindowRect.y + 40,
+                expandedWindowRect.width - 20, expandedWindowRect.height - 50);
+            Rect contentRect =
+                new Rect(0, 0, expandedWindowRect.width - 40, 1000); // Высота контента увеличена для скроллинга
+
+            scrollPosition = GUI.BeginScrollView(scrollRect, scrollPosition, contentRect, true, true);
+
+            DrawTileSelection(contentRect);
+
+            GUI.EndScrollView();
         }
     }
 
-    private void DrawTileSelection()
+    private void DrawTileSelection(Rect contentRect)
     {
         float tileSize = 50f;
-        float startX = windowRect.x + 10;
-        float startY = windowRect.y + 40;
+        float spacing = 10f;
+        float currentX = 10f;
+        float currentY = 10f;
 
-        TileItem[] tiles = { coloredRedTile, coloredPurpleTile, coloredBlueTile, coloredYellowTile, coloredGreenTile };
-        string[] tileNames = { "Red", "Purple", "Blue", "Yellow", "Green" };
+        // Получение тайлов из конфигурации
+        if (config == null || config.Tiles == null || config.Tiles.Count == 0)
+        {
+            GUI.Label(new Rect(currentX, currentY, contentRect.width - 20, 50f),
+                "Конфиг не загружен или отсутствуют элементы!", new GUIStyle()
+                {
+                    fontSize = 14,
+                    normal = { textColor = Color.red },
+                    alignment = TextAnchor.MiddleCenter
+                });
+            return;
+        }
 
-        float currentX = startX;
-        float currentY = startY;
+        TileItem[] tiles = config.Tiles.ToArray();
 
+        // Отрисовка тайлов
         for (int i = 0; i < tiles.Length; i++)
         {
-            if (currentX + tileSize > windowRect.x + windowRect.width - 10)
+            if (currentX + tileSize + spacing > contentRect.width)
             {
-                currentX = startX;
-                currentY += tileSize + 10;
+                currentX = 10f;
+                currentY += tileSize + spacing;
             }
 
-            GUI.DrawTexture(new Rect(currentX, currentY, tileSize, tileSize), tiles[i].Sprite.texture);
+            Rect tileRect = new Rect(currentX, currentY, tileSize, tileSize);
+            GUI.DrawTexture(tileRect, tiles[i].Sprite.texture);
 
-            if (Event.current.type == EventType.MouseDown && 
-                new Rect(currentX, currentY, tileSize, tileSize).Contains(Event.current.mousePosition))
+            if (Event.current.type == EventType.MouseDown && tileRect.Contains(Event.current.mousePosition))
             {
                 AddTileToTopBar(tiles[i]);
                 CloseWindow();
             }
 
-            currentX += tileSize + 10;
+            currentX += tileSize + spacing;
         }
     }
+
 
     private void AddTileToTopBar(TileItem tile)
     {
         // Проверяем значение инпут поля перед добавлением
-        string inputValue = topBarGoalsValues.Count > selectedGoalsBarIndex ? topBarGoalsValues[selectedGoalsBarIndex] : "0";
+        string inputValue = topBarGoalsValues.Count > selectedGoalsBarIndex
+            ? topBarGoalsValues[selectedGoalsBarIndex]
+            : "0";
         if (float.TryParse(inputValue, out float result) && result > 0)
         {
             // Увеличиваем количество ячеек при добавлении нового объекта
