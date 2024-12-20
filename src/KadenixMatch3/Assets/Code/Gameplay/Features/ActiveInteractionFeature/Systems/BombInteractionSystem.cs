@@ -46,7 +46,8 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     GameEntity entity = TileUtilsExtensions.GetTopTileByPosition(position);
 
                     if (entity != null && !entity.isBoardTile && entity != tileInteraction 
-                        && !TileUtilsExtensions.GetTilesInCell(position).Any(x => x.isTileSpawner) && !entity.isTileActiveProcess)
+                        && !TileUtilsExtensions.GetTilesInCell(position).Any(x => x.isTileSpawner) && !entity.isTileActiveProcess
+                        && !entity.isPowerUpMagicalBall)
                     {
                         tilesDirectInteraction.Add(entity);
                     }

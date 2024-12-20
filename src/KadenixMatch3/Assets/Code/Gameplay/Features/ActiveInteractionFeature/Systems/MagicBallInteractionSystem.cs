@@ -19,9 +19,9 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
             _tilesInteraction = game.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.WorldPosition,
-                    GameMatcher.PowerUpVerticalRocket,
+                    GameMatcher.PowerUpMagicalBall,
                     GameMatcher.ActiveInteraction)
-                .NoneOf(GameMatcher.InteractionDelay, GameMatcher.AnimationProcess));
+                .NoneOf(GameMatcher.InteractionDelay/*, GameMatcher.AnimationProcess*/));
         }
     
         public void Execute()
@@ -31,18 +31,8 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                 tileInteraction.isActiveInteraction = false;
                 
                 List<GameEntity> tilesDirectInteraction = new();
-                
-                for (int y = 0; y <= 13; y++)
-                {
-                    Vector2Int position = new Vector2Int(tileInteraction.BoardPosition.x, y);
-                    GameEntity entity = TileUtilsExtensions.GetTopTileByPosition(position);
-                
-                    if (entity != null && !entity.isBoardTile && entity != tileInteraction
-                        && !TileUtilsExtensions.GetTilesInCell(position).Any(x => x.isTileSpawner) && !entity.isTileActiveProcess)
-                    {
-                        tilesDirectInteraction.Add(entity);
-                    }
-                }
+
+                tilesDirectInteraction = TileUtilsExtensions.GetMaxedCrystalTiles();
 
                 foreach (var tile in tilesDirectInteraction)
                 {

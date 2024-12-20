@@ -23,9 +23,10 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
         {
             Sequence sequence = DOTween.Sequence();
 
-            Instantiate(_explosionPartical, transform);
+            ParticleSystem particle = Instantiate(_explosionPartical, transform.parent);
+            particle.transform.position = transform.position;
 
-            sequence.Append(transform.DOScale(Vector3.zero, 0.3f).SetEase(Ease.OutQuad))
+            sequence.Append(transform.DOScale(Vector3.zero, 0.1f).SetEase(Ease.OutQuad))
                 .OnComplete(() =>
                 {
                     entity.isDestructed = true;

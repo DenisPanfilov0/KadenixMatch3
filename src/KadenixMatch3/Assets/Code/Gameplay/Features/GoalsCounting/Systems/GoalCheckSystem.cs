@@ -19,7 +19,8 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
             _tilesChecking = game.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.WorldPosition,
-                    GameMatcher.GoalCheck));
+                    GameMatcher.GoalCheck)
+                .NoneOf(GameMatcher.GoalMoving));
             
             _goals = game.GetGroup(GameMatcher
                 .AllOf(
@@ -39,6 +40,8 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
                     if (tileChecking.TileType == goal.GoalType)
                     {
                         goal.ReplaceGoalAmount(goal.GoalAmount - 1);
+
+                        tileChecking.isGoalMoving = true;
                         _goalsUIService.ChangeGoalCount(tileChecking, 1);
                         
                         tileChecking.isGoalCheck = false;

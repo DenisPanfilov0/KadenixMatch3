@@ -17,6 +17,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature
             Add(systems.Create<HorizontalRocketInteractionSystem>());
             Add(systems.Create<VerticalRocketInteractionSystem>());
             Add(systems.Create<BombInteractionSystem>());
+            Add(systems.Create<MagicBallInteractionSystem>());
             
             Add(systems.Create<GrassModifierInteractionSystem>());
             

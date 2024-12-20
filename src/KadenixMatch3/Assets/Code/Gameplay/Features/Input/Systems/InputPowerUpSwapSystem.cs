@@ -53,11 +53,11 @@ namespace Code.Gameplay.Features.Input.Systems
                 }
                 else if (firstSelectTile.isPowerUpMagicalBall && secondSelectTile.isTilePowerUp)
                 {
-                    firstSelectTile.PowerUpTileTweenAnimation.MagicBallAndPowerUpActiveAnimation(GetMaxedCrystalTiles(), firstSelectTile, secondSelectTile);
+                    firstSelectTile.PowerUpTileTweenAnimation.MagicBallAndPowerUpActiveAnimation(TileUtilsExtensions.GetMaxedCrystalTiles(), firstSelectTile, secondSelectTile);
                 }
                 else if (secondSelectTile.isPowerUpMagicalBall && firstSelectTile.isTilePowerUp)
                 {
-                    secondSelectTile.PowerUpTileTweenAnimation.MagicBallAndPowerUpActiveAnimation(GetMaxedCrystalTiles(), secondSelectTile, firstSelectTile);
+                    secondSelectTile.PowerUpTileTweenAnimation.MagicBallAndPowerUpActiveAnimation(TileUtilsExtensions.GetMaxedCrystalTiles(), secondSelectTile, firstSelectTile);
                 }
                 else if (firstSelectTile.isPowerUpMagicalBall && secondSelectTile.isColoredCrystal)
                 {
@@ -85,44 +85,6 @@ namespace Code.Gameplay.Features.Input.Systems
             }
         }
 
-        private List<GameEntity> GetMaxedCrystalTiles()
-        {
-            // Словарь для хранения кристаллов по их типам
-            Dictionary<TileTypeId, List<GameEntity>> crystalGroups = new()
-            {
-                { TileTypeId.coloredRed, new List<GameEntity>() },
-                { TileTypeId.coloredBlue, new List<GameEntity>() },
-                { TileTypeId.coloredYellow, new List<GameEntity>() },
-                { TileTypeId.coloredGreen, new List<GameEntity>() },
-                { TileTypeId.coloredPurple, new List<GameEntity>() }
-            };
-
-            for (var x = 0; x < 13; x++)
-            {
-                for (var y = 0; y <= 13; y++)
-                {
-                    var position = new Vector2Int(x, y);
-                    var tileEntity = TileUtilsExtensions.GetTopTileByPosition(position);
-            
-                    if (tileEntity != null && tileEntity.isMovable && tileEntity.isColoredCrystal
-                        && !TileUtilsExtensions.GetTilesInCell(position).Any(t => t.isTileSpawner))
-                    {
-                        // Добавляем кристалл в соответствующую группу по его типу
-                        if (crystalGroups.ContainsKey(tileEntity.TileType))
-                        {
-                            crystalGroups[tileEntity.TileType].Add(tileEntity);
-                        }
-                    }
-                }
-            }
-
-            // Находим группу кристаллов с максимальным количеством элементов
-            List<GameEntity> maxCrystalGroup = crystalGroups
-                .OrderByDescending(group => group.Value.Count)
-                .First()
-                .Value;
-
-            return maxCrystalGroup;
-        }
+        
     }
 }

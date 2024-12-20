@@ -8,6 +8,7 @@ namespace Code.Gameplay.Features.GoalsCounting
     [Game] public class GoalAmount : IComponent { public int Value; }
     [Game] public class GoalType : IComponent { public TileTypeId Value; }
     [Game] public class GoalCreateProcess : IComponent { }
+    [Game] public class GoalMoving : IComponent { }
     
     [Game] public class GoalCheck : IComponent {  }
     [Game] public class GoalCompleted : IComponent {  }

@@ -21,7 +21,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     GameMatcher.WorldPosition,
                     GameMatcher.PowerUpMagicalBallAndCrystal,
                     GameMatcher.ActiveInteraction)
-                .NoneOf(GameMatcher.InteractionDelay, GameMatcher.AnimationProcess));
+                .NoneOf(GameMatcher.InteractionDelay/*, GameMatcher.AnimationProcess*/));
         }
     
         public void Execute()
@@ -29,6 +29,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
             foreach (GameEntity tileInteraction in _tilesInteraction.GetEntities(_buffer))
             {
                 tileInteraction.isActiveInteraction = false;
+                tileInteraction.isDestructed = true;
                 
                 List<GameEntity> tilesDirectInteraction = new();
                 
@@ -55,7 +56,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                 }
 
                 // tileInteraction.TileTweenAnimation.TilesOnDestroy(tileInteraction);
-                tileInteraction.isGoalCheck = true;
+                // tileInteraction.isGoalCheck = true;
                 
                 tilesDirectInteraction.Clear();
             }

@@ -70,27 +70,12 @@ namespace Code.Gameplay.Common.Extension
         {
             GameEntity entity = TileUtilsExtensions.GetTopTileByPosition(position);
 
-            // if (TileUtilsExtensions.GetTilesInCell(position).Count > 1 && (!entity.isMovable || entity.isCanFall))
-            // {
-            //     return true;
-            // }
-            //
-            // return false;
-
             return TileUtilsExtensions.GetTilesInCell(position).Count > 1 &&
-                   (!TileUtilsExtensions.GetTopTileByPosition(position).isMovable &&
-                   !TileUtilsExtensions.GetTopTileByPosition(position).isNotMovable
-                   || TileUtilsExtensions.GetTopTileByPosition(position).isTileFallableSurface)
-                    ;
+                   (!entity.isMovable &&
+                   !entity.isNotMovable || 
+                   entity.isTileFallableSurface ||
+                   entity.isGoalMoving);
         }
-
-        // private static bool CheckBottomTileForProcessedFalling(Vector2Int position)
-        // {
-        //     return TileUtilsExtensions.GetTilesInCell(position).Count > 1 &&
-        //            TileUtilsExtensions.GetTopTileByPosition(position).isMovable &&
-        //            /*TileUtilsExtensions.GetTopTileByPosition(position).isProcessedFalling &&*/
-        //            TileUtilsExtensions.GetTopTileByPosition(position).isCanFall;
-        // }
 
         private static bool CheckSpawnTile(Vector2Int position)
         {
