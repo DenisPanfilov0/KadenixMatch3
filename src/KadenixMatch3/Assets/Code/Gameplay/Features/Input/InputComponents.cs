@@ -11,6 +11,7 @@ namespace Code.Gameplay.Features.Input
     [Game, Unique] public class SecondSelectTileSwipe : IComponent {  }
     [Game, Unique] public class FirstSelectPowerUpSwipe : IComponent {  }
     [Game, Unique] public class SecondSelectPowerUpSwipe : IComponent {  }
+    [Game, Unique] public class TileForDoubleClick : IComponent {  }
     
     [Game] public class TileSwipeProcessed : IComponent {  }
     [Game] public class SwipeDirection : IComponent { public Vector3 Value; }

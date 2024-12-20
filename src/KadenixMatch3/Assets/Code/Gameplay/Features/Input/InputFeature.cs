@@ -8,7 +8,9 @@ namespace Code.Gameplay.Features.Input
         public InputFeature(ISystemFactory systems)
         {
             Add(systems.Create<InputSystem>());
+            
             Add(systems.Create<InputSwapSystem>());
+            Add(systems.Create<InputDoubleClickSystem>());
             Add(systems.Create<InputPowerUpSwapSystem>());
             
             Add(systems.Create<TileSwipeProcessedSystem>());

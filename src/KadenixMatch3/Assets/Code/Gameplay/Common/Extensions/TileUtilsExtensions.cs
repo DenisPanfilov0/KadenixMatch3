@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Code.Gameplay.Features.BoardBuildFeature;
 using UnityEngine;
 
 namespace Code.Gameplay.Common.Extension
@@ -73,6 +74,46 @@ namespace Code.Gameplay.Common.Extension
         {
             return Mathf.Abs(pos1.x - pos2.x) == 1 && pos1.y == pos2.y ||
                    Mathf.Abs(pos1.y - pos2.y) == 1 && pos1.x == pos2.x;
+        }
+        
+        public static List<GameEntity> GetMaxedCrystalTiles()
+        {
+            // Словарь для хранения кристаллов по их типам
+            Dictionary<TileTypeId, List<GameEntity>> crystalGroups = new()
+            {
+                { TileTypeId.coloredRed, new List<GameEntity>() },
+                { TileTypeId.coloredBlue, new List<GameEntity>() },
+                { TileTypeId.coloredYellow, new List<GameEntity>() },
+                { TileTypeId.coloredGreen, new List<GameEntity>() },
+                { TileTypeId.coloredPurple, new List<GameEntity>() }
+            };
+
+            for (var x = 0; x < 13; x++)
+            {
+                for (var y = 0; y <= 13; y++)
+                {
+                    var position = new Vector2Int(x, y);
+                    var tileEntity = TileUtilsExtensions.GetTopTileByPosition(position);
+            
+                    if (tileEntity != null && tileEntity.isMovable && tileEntity.isColoredCrystal
+                        && !TileUtilsExtensions.GetTilesInCell(position).Any(t => t.isTileSpawner))
+                    {
+                        // Добавляем кристалл в соответствующую группу по его типу
+                        if (crystalGroups.ContainsKey(tileEntity.TileType))
+                        {
+                            crystalGroups[tileEntity.TileType].Add(tileEntity);
+                        }
+                    }
+                }
+            }
+
+            // Находим группу кристаллов с максимальным количеством элементов
+            List<GameEntity> maxCrystalGroup = crystalGroups
+                .OrderByDescending(group => group.Value.Count)
+                .First()
+                .Value;
+
+            return maxCrystalGroup;
         }
     }
 }

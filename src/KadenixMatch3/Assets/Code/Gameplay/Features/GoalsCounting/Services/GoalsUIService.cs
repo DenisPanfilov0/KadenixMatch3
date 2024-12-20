@@ -45,40 +45,37 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
             switch (entity.TileType)
             {
                 case TileTypeId.coloredRed:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.coloredYellow:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.coloredBlue:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.coloredGreen:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.coloredPurple:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.tileModifierSpawner:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.powerUpVerticalRocket:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.powerUpHorizontalRocket:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.powerUpBomb:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
-                    break;
-                case TileTypeId.powerUpMagicBall:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.grassModifier:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
                 case TileTypeId.iceModifier:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity.TileType, 1);});
+                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
                     break;
             }
             
@@ -117,7 +114,7 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
                     entity.PowerUpBombAnimation.TilesOnDestroy(entity);
                     break;
                 case TileTypeId.powerUpMagicBall:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
+                    entity.MagicBallTileAnimation.TilesOnDestroy(entity);
                     break;
                 case TileTypeId.grassModifier:
                     entity.ColoredTileAnimation.TilesOnDestroy(entity);
@@ -133,9 +130,10 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
             _goals.Clear();
         }
 
-        private void InvokeGoalChange(TileTypeId tileType, int amount)
+        private void InvokeGoalChange(GameEntity entity, int amount)
         {
-            OnChangeGoal?.Invoke(tileType, amount);
+            OnChangeGoal?.Invoke(entity.TileType, amount);
+            entity.isGoalMoving = false;
         }
     }
 }

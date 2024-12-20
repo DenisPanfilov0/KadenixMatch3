@@ -56,6 +56,14 @@ namespace Code.Gameplay.Features.Input.Systems
                 if (_initialTilePosition.HasValue && _initialTilePosition.Value == position && (Time.realtimeSinceStartup - _lastClickTime) < DoubleClickThreshold)
                 {
                     singleClickEntity.ReplaceDoubleClick(position);
+
+                    GameEntity selectedTile = TileUtilsExtensions.GetTopTileByPosition(_initialTilePosition.Value);
+
+                    if (selectedTile.isTilePowerUp)
+                    {
+                        selectedTile.isTileForDoubleClick = true;
+                    }
+                    
                     _initialTilePosition = null;
                 }
                 else

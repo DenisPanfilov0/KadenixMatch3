@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 5391201536312418287}
   - component: {fileID: -6930028777664931024}
   - component: {fileID: 8825457673772085604}
-  - component: {fileID: 6598838908152516540}
-  - component: {fileID: 103826092892682570}
+  - component: {fileID: 4415297918261627706}
+  - component: {fileID: -2346295824577092753}
   m_Layer: 0
   m_Name: powerUpMagicBall
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 592744411
   m_SortingLayer: 1
-  m_SortingOrder: 6
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: fda3841cf605f4326985b0e3062713d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -158,7 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640645aa67f84679955a0b0423b03ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particle: {fileID: 0}
+  _bombAndBombParticle: {fileID: 9133053495074588382, guid: 8f20bf74c38c1254797346779bbaba11, type: 3}
+  _rocketAndBombParticle: {fileID: 7261886834198090750, guid: 9a8a39328c9052d4d97edd7db198983e, type: 3}
+  _rocketAndRocketParticle: {fileID: 7261886834198090750, guid: 9fa4c3d87a5e1c6459a85bbc64c71439, type: 3}
 --- !u!114 &8825457673772085604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityView: {fileID: 7288713654061421946}
   PowerUpTileTweenAnimation: {fileID: -6930028777664931024}
---- !u!114 &6598838908152516540
+--- !u!114 &4415297918261627706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,11 +184,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7727566088041989992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de358a67a8f459a98aaae7960c20cfe, type: 3}
+  m_Script: {fileID: 11500000, guid: f56afb35886e4fdc8a473ead604382c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionPartical: {fileID: 0}
---- !u!114 &103826092892682570
+  _explosionParticale: {fileID: 0}
+--- !u!114 &-2346295824577092753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,8 +197,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7727566088041989992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90194ba5eb3a421d9463a15b41c311d0, type: 3}
+  m_Script: {fileID: 11500000, guid: df2faf1a499c492db0950cfdd3fbbf37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 7288713654061421946}
-  ColoredTileAnimation: {fileID: 6598838908152516540}
+  MagicBallTileAnimation: {fileID: 4415297918261627706}

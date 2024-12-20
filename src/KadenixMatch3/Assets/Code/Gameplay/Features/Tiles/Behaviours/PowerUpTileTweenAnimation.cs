@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Code.Gameplay.Common.Extension;
+using Code.Gameplay.Features.BoardBuildFeature;
 using DG.Tweening;
 using UnityEngine;
 
@@ -7,7 +8,11 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
 {
     public class PowerUpTileTweenAnimation : MonoBehaviour
     {
-        [SerializeField] private ParticleSystem _particle;
+        [SerializeField] private ParticleSystem _bombAndBombParticle;
+        [SerializeField] private ParticleSystem _rocketAndBombParticle;
+        [SerializeField] private ParticleSystem _rocketAndRocketParticle;
+
+        private Vector3 _currentTransform;
         
         public void MagicBallAndCrystalActiveAnimation(GameEntity firstTileEntity, GameEntity secondTileEntity)
         {
@@ -66,6 +71,12 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
 
                             firstTileEntity.AddPowerUpMagicalBallAndCrystal(secondTileEntity.TileType);
                             firstTileEntity.isActiveInteraction = true;
+
+                            // firstTileEntity.isAnimationProcess = false;
+                            secondTileEntity.isAnimationProcess = false;
+                            
+                            secondTileEntity.isTileActiveProcess = false;
+                            firstTileEntity.isTileActiveProcess = false;
                         });
                 });
         }
@@ -115,9 +126,22 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                         activationSequence.AppendCallback(() =>
                         {
                             tile.isActiveInteraction = true;
-                            tile.AddTileForPowerUpGenerationByType(secondTileEntity.TileType);
+
+                            if (secondTileEntity.TileType == TileTypeId.powerUpVerticalRocket || secondTileEntity.TileType == TileTypeId.powerUpHorizontalRocket)
+                            {
+                                int range = Random.Range(0, 2);
+                                tile.AddTileForPowerUpGenerationByType(range == 1 ? TileTypeId.powerUpVerticalRocket : TileTypeId.powerUpHorizontalRocket);
+                            }
+                            else
+                            {
+                                tile.AddTileForPowerUpGenerationByType(secondTileEntity.TileType);
+                            }
+                            
+                            tile.isGoalCheck = true;
+                            tile.isActiveInteraction = true;
                         });
-                        activationSequence.AppendInterval(0.05f);
+                        
+                        activationSequence.AppendInterval(0.02f);
                     }
                     
                     // После активации всех тайлов помечаем firstTileEntity и secondTileEntity как удаленные
@@ -212,12 +236,17 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                         firstTileEntity.isPowerUpBombAndBomb = true;
                         firstTileEntity.isActiveInteraction = true;
                         secondTileEntity.isDestructed = true;
+                        
+                        _currentTransform = new Vector3(firstTileEntity.BoardPosition.x, firstTileEntity.BoardPosition.y, -3f);
+                        
                     }
                     else if (secondTileEntity.isSecondSelectPowerUpSwipe)
                     {
                         secondTileEntity.isPowerUpBombAndBomb = true;
                         secondTileEntity.isActiveInteraction = true;
                         firstTileEntity.isDestructed = true;
+                        
+                        _currentTransform = new Vector3(secondTileEntity.BoardPosition.x, secondTileEntity.BoardPosition.y, -3f);
                     }
                     // Логика завершения анимации, например, обновление состояния
                     firstTileEntity.isFirstSelectPowerUpSwipe = false;
@@ -225,8 +254,11 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                     secondTileEntity.isFirstSelectPowerUpSwipe = false;
                     secondTileEntity.isSecondSelectPowerUpSwipe = false;
                     
-                    // firstTileEntity.isDestructed = true;
-                    // secondTileEntity.isDestructed = true;
+                    firstTileEntity.isDestructed = true;
+                    secondTileEntity.isDestructed = true;
+                    
+                    ParticleSystem particle = Instantiate(_bombAndBombParticle, transform.parent);
+                    particle.transform.position = _currentTransform;
                 });
         }
 
@@ -262,12 +294,16 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                         firstTileEntity.isPowerUpRocketAndRocket = true;
                         firstTileEntity.isActiveInteraction = true;
                         secondTileEntity.isDestructed = true;
+                        
+                        _currentTransform = new Vector3(firstTileEntity.BoardPosition.x, firstTileEntity.BoardPosition.y, -3f);
                     }
                     else if (secondTileEntity.isSecondSelectPowerUpSwipe)
                     {
                         secondTileEntity.isPowerUpRocketAndRocket = true;
                         secondTileEntity.isActiveInteraction = true;
                         firstTileEntity.isDestructed = true;
+                        
+                        _currentTransform = new Vector3(secondTileEntity.BoardPosition.x, secondTileEntity.BoardPosition.y, -3f);
                     }
                     // Логика завершения анимации, например, обновление состояния
                     firstTileEntity.isFirstSelectPowerUpSwipe = false;
@@ -275,8 +311,11 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                     secondTileEntity.isFirstSelectPowerUpSwipe = false;
                     secondTileEntity.isSecondSelectPowerUpSwipe = false;
 
-                    // firstTileEntity.isDestructed = true;
-                    // secondTileEntity.isDestructed = true;
+                    firstTileEntity.isDestructed = true;
+                    secondTileEntity.isDestructed = true;
+                    
+                    ParticleSystem particle = Instantiate(_rocketAndRocketParticle, transform.parent);
+                    particle.transform.position = _currentTransform;
                 });
         }
         
@@ -312,12 +351,16 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                         firstTileEntity.isPowerUpBombAndRocket = true;
                         firstTileEntity.isActiveInteraction = true;
                         secondTileEntity.isDestructed = true;
+                        
+                        _currentTransform = new Vector3(firstTileEntity.BoardPosition.x, firstTileEntity.BoardPosition.y, -3f);
                     }
                     else if (secondTileEntity.isSecondSelectPowerUpSwipe)
                     {
                         secondTileEntity.isPowerUpBombAndRocket = true;
                         secondTileEntity.isActiveInteraction = true;
                         firstTileEntity.isDestructed = true;
+                        
+                        _currentTransform = new Vector3(secondTileEntity.BoardPosition.x, secondTileEntity.BoardPosition.y, -3f);
                     }
                     // Логика завершения анимации, например, обновление состояния
                     firstTileEntity.isFirstSelectPowerUpSwipe = false;
@@ -325,8 +368,11 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                     secondTileEntity.isFirstSelectPowerUpSwipe = false;
                     secondTileEntity.isSecondSelectPowerUpSwipe = false;
 
-                    // firstTileEntity.isDestructed = true;
-                    // secondTileEntity.isDestructed = true;
+                    firstTileEntity.isDestructed = true;
+                    secondTileEntity.isDestructed = true;
+                    
+                    ParticleSystem particle = Instantiate(_rocketAndBombParticle, transform.parent);
+                    particle.transform.position = _currentTransform;
                 });
         }
     }

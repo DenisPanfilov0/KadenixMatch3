@@ -19,7 +19,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     GameMatcher.WorldPosition,
                     GameMatcher.PowerUpBombAndBomb,
                     GameMatcher.ActiveInteraction)
-                .NoneOf(GameMatcher.InteractionDelay, GameMatcher.AnimationProcess));
+                .NoneOf(GameMatcher.InteractionDelay/*, GameMatcher.AnimationProcess*/));
         }
 
         public void Execute()
@@ -58,7 +58,8 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     var tileEntity = TileUtilsExtensions.GetTopTileByPosition(position);
                     if (tileEntity != null && tileEntity.TileType != TileTypeId.powerUpMagicBall
                         && !TileUtilsExtensions.GetTilesInCell(position).Any(x => x.isTileSpawner)
-                        && !tileEntity.isActiveInteraction && !tileEntity.isBoardTile && !tileEntity.isTileActiveProcess)
+                        && !tileEntity.isActiveInteraction && !tileEntity.isBoardTile && !tileEntity.isTileActiveProcess
+                        && !tileEntity.isPowerUpMagicalBall)
                     {
                         tilesDirectInteraction.Add(tileEntity);
                     }
