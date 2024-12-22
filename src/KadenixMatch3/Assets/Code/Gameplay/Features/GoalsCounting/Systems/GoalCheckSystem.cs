@@ -20,7 +20,7 @@ namespace Code.Gameplay.Features.GoalsCounting.Systems
                 .AllOf(
                     GameMatcher.WorldPosition,
                     GameMatcher.GoalCheck)
-                .NoneOf(GameMatcher.GoalMoving));
+                .NoneOf(GameMatcher.GoalMoving, GameMatcher.Destructed));
             
             _goals = game.GetGroup(GameMatcher
                 .AllOf(

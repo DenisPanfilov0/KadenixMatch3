@@ -35,12 +35,12 @@ namespace Code.Gameplay
       Add(systems.Create<FindMatchesFeature>());
       
       Add(systems.Create<PowerUpGeneratedFeature>());
-      
-      
-      Add(systems.Create<GoalsCountingFeature>());
+
 
       Add(systems.Create<ActiveInteractionFeature>());
-      
+      Add(systems.Create<GoalsCountingFeature>());
+
+
       Add(systems.Create<CountingMovesFeature>());
       
       

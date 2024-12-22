@@ -26,7 +26,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
         {
             foreach (GameEntity tileInteraction in _tilesInteraction.GetEntities(_buffer))
             {
-                tileInteraction.isActiveInteraction = false;
+                // tileInteraction.isActiveInteraction = false;
 
                 List<GameEntity> tiles = new();
 
@@ -57,7 +57,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                 {
                     tile.ReplaceDamageReceived(tile.DamageReceived + 1);
                     tile.isActiveInteraction = true;
-                    tile.isGoalCheck = true;
+                    // tile.isGoalCheck = true;
                 }
 
                 // tileInteraction.TileTweenAnimation.TilesOnDestroy(tileInteraction);

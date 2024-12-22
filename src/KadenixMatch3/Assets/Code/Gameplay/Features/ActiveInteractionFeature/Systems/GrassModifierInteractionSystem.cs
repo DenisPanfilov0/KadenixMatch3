@@ -30,7 +30,8 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     }
                     else if (tileInteraction.TileDurability == 1)
                     {
-                        tileInteraction.GrassModifierAnimation.TilesOnDestroy(tileInteraction);
+                        // tileInteraction.GrassModifierAnimation.TilesOnDestroy(tileInteraction);
+                        tileInteraction.isGoalCheck = true;
                     }
                 }
 

@@ -21,7 +21,7 @@ namespace Code.Gameplay.Features.Input.Systems
         {
             foreach (var clickTile in _clickTiles.GetEntities(_buffer))
             {
-                clickTile.isGoalCheck = true;
+                // clickTile.isGoalCheck = true;
                 clickTile.isActiveInteraction = true;
                 clickTile.isTileForDoubleClick = false;
                 

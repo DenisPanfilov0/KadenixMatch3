@@ -30,11 +30,8 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
             {
                 // tileInteraction.TileTweenAnimation.TilesOnDestroy(tileInteraction);
                 tileInteraction.isActiveInteraction = false;
-                // tileInteraction.isGoalCheck = true;
+                tileInteraction.isGoalCheck = true;
                 
-                //todo(d.p.) это переносим в отдельную систему
-                // _goalsUIService.ChangeGoalCount(tileInteraction.TileType, 1);
-
                 GameEntity nextEntity = TileUtilsExtensions.GetNextTopTileByPosition(tileInteraction.BoardPosition, tileInteraction.PositionInCoverageQueue);
                 
                 _tiles.Add(TileUtilsExtensions.GetTopTileByPosition(new Vector2Int(tileInteraction.BoardPosition.x + 1,
