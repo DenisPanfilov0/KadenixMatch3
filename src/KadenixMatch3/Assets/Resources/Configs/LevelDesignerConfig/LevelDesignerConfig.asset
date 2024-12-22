@@ -78,3 +78,23 @@ MonoBehaviour:
     Durability: 1
     TileType: 1
     Layer: 2
+  - Sprite: {fileID: 21300000, guid: bf3787589a8b943779f60a594c934e4e, type: 3}
+    Type: 11
+    Durability: 1
+    TileType: 2
+    Layer: 2
+  - Sprite: {fileID: -4955736626584017273, guid: ef14f4e85c9a3ad42973619bbda1bbbc, type: 3}
+    Type: 9
+    Durability: 1
+    TileType: 2
+    Layer: 2
+  - Sprite: {fileID: -4548025000396796697, guid: 3f00383d1cb353149a8064f59d1d33db, type: 3}
+    Type: 9
+    Durability: 1
+    TileType: 2
+    Layer: 2
+  - Sprite: {fileID: 21300000, guid: fda3841cf605f4326985b0e3062713d2, type: 3}
+    Type: 12
+    Durability: 1
+    TileType: 2
+    Layer: 2
