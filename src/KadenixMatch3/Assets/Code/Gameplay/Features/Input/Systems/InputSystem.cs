@@ -59,7 +59,7 @@ namespace Code.Gameplay.Features.Input.Systems
 
                     GameEntity selectedTile = TileUtilsExtensions.GetTopTileByPosition(_initialTilePosition.Value);
 
-                    if (selectedTile.isTilePowerUp)
+                    if (selectedTile != null && selectedTile.isTilePowerUp)
                     {
                         selectedTile.isTileForDoubleClick = true;
                     }

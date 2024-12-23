@@ -8,6 +8,7 @@ using Code.Gameplay.Features.CountingMoves.Services;
 using Code.Gameplay.Features.FindMatchesFeature.Services;
 using Code.Gameplay.Features.GoalsCounting.Services;
 using Code.Gameplay.Features.GoalsCounting.UI;
+using Code.Gameplay.Features.SettingInGame.Services;
 using Code.Gameplay.Features.SkillCharacter.Services;
 using Code.Gameplay.StaticData;
 using Code.Gameplay.Windows;
@@ -111,6 +112,7 @@ namespace Code.Infrastructure.Installers
       Container.Bind<IGoalsUIService>().To<GoalsUIService>().AsSingle();
       Container.Bind<IGameWinOrLoseUIService>().To<GameWinOrLoseUIService>().AsSingle();
       Container.Bind<IMovesInGameService>().To<MovesInGameService>().AsSingle();
+      Container.Bind<ISettingsInGameService>().To<SettingsInGameService>().AsSingle();
     }
 
     private void BindGameplayFactories()

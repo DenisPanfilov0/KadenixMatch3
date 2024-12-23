@@ -27,7 +27,6 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
         private readonly ICharacterHeartUIService _characterHeartUIService;
         private readonly IMovesInGameService _movesInGameService;
         private readonly IStaticDataService _staticDataService;
-        private readonly IGroup<GameEntity> _boards;
 
         private readonly CostToContinuePlayingConfig _costToContinuePlayingConfig;
 
@@ -45,7 +44,6 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
             _movesInGameService = movesInGameService;
             _staticDataService = staticDataService;
 
-            _boards = game.GetGroup(GameMatcher.BoardState);
 
             _costToContinuePlayingConfig = _staticDataService.GetCostToContinuePlayingConfig();
         }
@@ -72,7 +70,8 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
         public void OpenWinWindow()
         {
             _windowService.Open(WindowId.GameWinWindow);
-            _characterGoldUIService.IncreaseGold(300); _characterHeartUIService.IncreaseHeart(1);
+            _characterGoldUIService.IncreaseGold(300); 
+            _characterHeartUIService.IncreaseHeart(1);
             Cleanup();
         }
         
@@ -86,6 +85,7 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
 
         public void RestartLevel()
         {
+            _characterHeartUIService.DecreaseHeart(1);
             _stateMachine.Enter<RestartMatch3LevelState, string>(SceneName);
             Cleanup();
         }
@@ -118,10 +118,7 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
 
         private void AddMoves()
         {
-            foreach (GameEntity board in _boards)
-            {
-                board.isStopGame = false;
-            }
+            
             
             _movesInGameService.IncreaseMoves(1);
         }
