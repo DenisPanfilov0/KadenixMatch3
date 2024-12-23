@@ -83,20 +83,20 @@ namespace Code.Gameplay.Features.GoalsCounting.UI.WinLoseWindows
 
         private void GameLose()
         {
-            _windowService.Close(Id);
             _gameWinOrLoseUIService.GameLose();
+            _windowService.Close(Id);
         }
         
         private void WatchVideo()
         {
-            _windowService.Close(Id);
             _gameWinOrLoseUIService.AddMovesForVideo();
+            _windowService.Close(Id);
         }
         
         private void PayCoins()
         {
-            _windowService.Close(Id);
             _gameWinOrLoseUIService.AddMovesForCoins();
+            _windowService.Close(Id);
         }
     }
 }
