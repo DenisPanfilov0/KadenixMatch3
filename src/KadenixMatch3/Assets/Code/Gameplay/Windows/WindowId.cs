@@ -13,5 +13,6 @@
     ShopItemWindow = 7,
     PreLoseWindow = 8,
     PrematureExitWindow = 9,
+    LivesInfoWindow = 10,
   }
 }

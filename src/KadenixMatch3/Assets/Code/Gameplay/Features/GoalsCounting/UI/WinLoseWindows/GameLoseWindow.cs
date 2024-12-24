@@ -42,7 +42,7 @@ namespace Code.Gameplay.Features.GoalsCounting.UI.WinLoseWindows
         private void RestartLevel()
         {
             _gameWinOrLoseUIService.RestartLevel();
-            _windowService.Close(Id);
+            // _windowService.Close(Id);
         }
     }
 }

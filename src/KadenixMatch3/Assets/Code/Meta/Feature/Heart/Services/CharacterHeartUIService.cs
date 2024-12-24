@@ -22,6 +22,10 @@ namespace Code.Meta.Feature.Heart.Services
         public void IncreaseHeart(int count)
         {
             _progress.ProgressData.ProgressModel.Heart += count;
+
+            if (_progress.ProgressData.ProgressModel.Heart > _progress.ProgressData.ProgressModel.MaxHeart) 
+                _progress.ProgressData.ProgressModel.Heart = _progress.ProgressData.ProgressModel.MaxHeart;
+            
             HeartChange?.Invoke();
         }
         

@@ -1,6 +1,7 @@
 using Code.Gameplay.Windows;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
+using Code.Progress.Provider;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -15,10 +16,12 @@ namespace Code.Meta.UI.HUD
         private IWindowService _windowService;
 
         public Button StartBattleButton;
+        private IProgressProvider _progress;
 
         [Inject]
-        private void Construct(IGameStateMachine gameStateMachine, IWindowService windowService)
+        private void Construct(IGameStateMachine gameStateMachine, IWindowService windowService, IProgressProvider progress)
         {
+            _progress = progress;
             _stateMachine = gameStateMachine;
             _windowService = windowService;
         }
@@ -28,10 +31,21 @@ namespace Code.Meta.UI.HUD
             StartBattleButton.onClick.AddListener(EnterBattleLoadingState);
         }
 
-        private void EnterBattleLoadingState() =>
+        private void EnterBattleLoadingState()
+        {
             // _stateMachine.Enter<LoadingMatch3State, string>(BattleSceneName);
-            _windowService.Open(WindowId.StartLevelPanel);
-    
+
+            if (_progress.ProgressData.ProgressModel.Heart > 0)
+            {
+                _windowService.Open(WindowId.StartLevelPanel);
+            }
+            else
+            {
+                _windowService.Open(WindowId.LivesInfoWindow);
+            }
+            
+        }
+
         private void OpenShop()
         {
             _windowService.Open(WindowId.ShopWindow);
