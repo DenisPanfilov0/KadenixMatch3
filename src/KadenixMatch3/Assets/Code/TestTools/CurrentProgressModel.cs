@@ -14,6 +14,7 @@ namespace Code.TestTools
         [SerializeField] private Button _changeLevel;
         [SerializeField] private TMP_InputField _newLevelValue;
         [SerializeField] private TextMeshProUGUI _currentLevel;
+        [SerializeField] private int _currentHeart;
 
         private IProgressProvider _progress;
 
@@ -31,6 +32,11 @@ namespace Code.TestTools
             _changeLevel.onClick.AddListener(ChangeCurrentLevel);
         }
 
+        private void OnDestroy()
+        {
+            _changeLevel.onClick.RemoveListener(ChangeCurrentLevel);
+        }
+
         private void ChangeCurrentLevel()
         {
             if (int.TryParse(_newLevelValue.text, out int newLevel))
@@ -39,6 +45,8 @@ namespace Code.TestTools
             }
             
             _currentLevel.text = $"Current Level: {_progress.ProgressData.ProgressModel.CurrentLevel.ToString()}";
+
+            _currentHeart = _progress.ProgressData.ProgressModel.Heart;
         }
     }
 }

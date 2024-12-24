@@ -85,9 +85,16 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
 
         public void RestartLevel()
         {
-            _characterHeartUIService.DecreaseHeart(1);
-            _stateMachine.Enter<RestartMatch3LevelState, string>(SceneName);
-            Cleanup();
+            if (_progress.ProgressData.ProgressModel.Heart > 0)
+            {
+                _characterHeartUIService.DecreaseHeart(1);
+                _stateMachine.Enter<RestartMatch3LevelState, string>(SceneName);
+                Cleanup();
+            }
+            else
+            {
+                _windowService.Open(WindowId.LivesInfoWindow);
+            }
         }
 
         public void EnterMainMenu()

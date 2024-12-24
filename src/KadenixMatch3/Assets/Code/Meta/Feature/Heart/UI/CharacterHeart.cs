@@ -1,3 +1,4 @@
+using System;
 using Code.Meta.Feature.Heart.Services;
 using TMPro;
 using UnityEngine;
@@ -19,7 +20,14 @@ namespace Code.Meta.Feature.Heart.UI
         {
             _characterHeartUIService = characterHeartUIService;
 
+            _characterHeartUIService.HeartChange += UpdateHeartsState;
+
             UpdateHeartsState();
+        }
+
+        private void OnDestroy()
+        {
+            _characterHeartUIService.HeartChange -= UpdateHeartsState;
         }
 
         private void UpdateHeartsState()

@@ -18,15 +18,18 @@ namespace Code.Progress.Data
     public int CurrentLevel;
     public int Coins;
     public int Heart;
+    public int MaxHeart;
+    public long LastLifeRegenerationTime;
     public List<Level> Levels;
     public SequentialLevelsReward SequentialLevelsReward;
     public CharacterBoosters CharacterBoosters;
 
     public ProgressModel()
     {
-      CurrentLevel = -2;
-      Coins = 2500;
+      CurrentLevel = 1;
+      Coins = 2000;
       Heart = 5;
+      MaxHeart = 5;
       Levels = new();
       SequentialLevelsReward = new SequentialLevelsReward();
       CharacterBoosters = new CharacterBoosters();

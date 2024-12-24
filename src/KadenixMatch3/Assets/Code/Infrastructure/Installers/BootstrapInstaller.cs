@@ -113,6 +113,7 @@ namespace Code.Infrastructure.Installers
       Container.Bind<IGameWinOrLoseUIService>().To<GameWinOrLoseUIService>().AsSingle();
       Container.Bind<IMovesInGameService>().To<MovesInGameService>().AsSingle();
       Container.Bind<ISettingsInGameService>().To<SettingsInGameService>().AsSingle();
+      Container.Bind<ILivesInfoService>().To<LivesInfoService>().AsSingle();
     }
 
     private void BindGameplayFactories()

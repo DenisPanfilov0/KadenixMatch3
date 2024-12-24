@@ -92,7 +92,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!114 &6983228410836024303
 MonoBehaviour:
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de358a67a8f459a98aaae7960c20cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _explosionPartical: {fileID: 0}
 --- !u!114 &-1943493681817398210
 MonoBehaviour:
   m_ObjectHideFlags: 0
