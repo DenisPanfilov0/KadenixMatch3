@@ -6,5 +6,6 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services
     {
         Dictionary<List<GameEntity>, FigureTypeId> GetMatches(GameEntity entity);
         List<GameEntity> FindIdenticalTiles(GameEntity startTile);
+        bool CheckMatches(List<GameEntity> entities);
     }
 }

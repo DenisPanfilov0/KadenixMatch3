@@ -50,7 +50,7 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services.Figures
                    
                 foreach (var entity in entitiesInCell)
                 {
-                    if (entity is not null && entity.isMovable && !entity.isProcessedFalling && !entity.isTileSwipeProcessed)
+                    if (entity is not null && entity.isMovable && !entity.isProcessedFalling && (!entity.isTileSwipeProcessed || (entity.isTileSwipeProcessed && entity.isTileForCheckedMatch)))
                     {
                         if (entity.TileType != contentType)
                         {

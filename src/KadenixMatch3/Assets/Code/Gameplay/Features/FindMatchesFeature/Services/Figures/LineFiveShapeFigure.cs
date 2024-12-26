@@ -28,7 +28,7 @@ namespace Sources.TilesContext.Services.FindMatches.FigureFinder
         {
             foreach (var tile in tiles)
             {
-                if (!tile.hasIdenticalTilesForMatche)
+                if (!tile.hasIdenticalTilesForMatche && !tile.isTileForCheckedMatch)
                 {
                     continue;
                 }
@@ -36,6 +36,14 @@ namespace Sources.TilesContext.Services.FindMatches.FigureFinder
                 var tileGroup = TryGetShapeCenter(tile);
                 if (tileGroup != null)
                 {
+                    if (tile.isTileForCheckedMatch)
+                    {
+                        return new Dictionary<List<GameEntity>, FigureTypeId>
+                        {
+                            {tileGroup, FigureTypeId.LineFiveShapeFigure}
+                        };
+                    }
+                    
                     foreach (var tileEntity in tileGroup)
                     {
                         tileEntity.isFindMatchesProcess = true;

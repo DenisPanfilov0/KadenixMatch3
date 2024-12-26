@@ -12,7 +12,7 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services
     {
         public Dictionary<List<GameEntity>, FigureTypeId> GetMatches(GameEntity entity)
         {
-            var matches = entity.IdenticalTilesForMatche;
+            List<Vector2Int> matches = entity.IdenticalTilesForMatche;
             
             List<GameEntity> allTilePosition = new();
                     
@@ -56,6 +56,55 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services
             }
 
             return null;
+        }
+        
+        public bool CheckMatches(List<GameEntity> entities)
+        {
+            // var matches = entities;
+            //
+            // List<GameEntity> allTilePosition = new();
+            //
+            // allTilePosition = entities;
+                    
+            // foreach (GameEntity tilePosition in matches)
+            // {
+            //     allTilePosition.Add(TileUtilsExtensions.GetTopTileByPosition(tilePosition));
+            // }
+
+            if (entities.Count >= 3)
+            {
+                var tilesEntities = GetFigure(entities);
+
+                if (tilesEntities is not null /*&& !tilesEntities.Any(x => x.Key.Any(y => y.isTilePowerUp))*/)
+                {
+                    // foreach (var figure in tilesEntities)
+                    // {
+                    //     entity.AddPowerUpFigureType(figure.Value);
+                    // }
+
+                    // foreach (var entities in tilesEntities.Keys)
+                    // {
+                    //     if (entities.All(x => !x.hasPowerUpFigureType))
+                    //     {
+                    //         entity.ReplacePowerUpFigureType(tilesEntities.First().Value);
+                    //         return tilesEntities;
+                    //     }
+                    //
+                    //     // entities.FirstOrDefault(x => !x.hasPowerUpFigureType);
+                    //     // {
+                    //         // entity.ReplacePowerUpFigureType(tilesEntities.First().Value);
+                    //         // return tilesEntities;
+                    //     // }
+                    // }
+
+
+                    return true;
+                }
+
+                // return matches;
+            }
+
+            return false;
         }
 
         public List<GameEntity> FindIdenticalTiles(GameEntity startTile)

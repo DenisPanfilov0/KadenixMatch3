@@ -9,6 +9,7 @@ namespace Code.Gameplay.Features.FindMatchesFeature
     [Game] public class TileGroupConvergeForBooster : IComponent { }
     [Game] public class FindMatchesProcess : IComponent { }
     [Game] public class SelectTileResearchMatches : IComponent { }
+    [Game] public class TileForCheckedMatch : IComponent { }
     
     [Game] public class MovedForCenterBooster : IComponent { public Vector3 Value; }
     
