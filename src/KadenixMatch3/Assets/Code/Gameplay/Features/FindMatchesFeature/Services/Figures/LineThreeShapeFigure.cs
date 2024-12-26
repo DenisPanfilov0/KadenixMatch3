@@ -22,14 +22,23 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Services.Figures
         {
             foreach (var tile in tiles)
             {
-                if (!tile.hasIdenticalTilesForMatche)
+                if (!tile.hasIdenticalTilesForMatche && !tile.isTileForCheckedMatch)
                 {
                     continue;
                 }
                 
                 var tileGroup = TryGetShapeCenter(tile);
+                
                 if (tileGroup != null)
                 {
+                    if (tile.isTileForCheckedMatch)
+                    {
+                        return new Dictionary<List<GameEntity>, FigureTypeId>
+                        {
+                            {tileGroup, FigureTypeId.LineThreeShapeFigure}
+                        };
+                    }
+                    
                     foreach (var tileEntity in tileGroup)
                     {
                         tileEntity.isFindMatchesProcess = true;
