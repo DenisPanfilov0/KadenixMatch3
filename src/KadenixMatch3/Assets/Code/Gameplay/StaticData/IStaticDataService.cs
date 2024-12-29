@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Code.Config;
 using Code.Gameplay.Features.GoalsCounting.Configs;
 using Code.Gameplay.Windows;
 using Code.Meta.Feature.Shop;
@@ -13,5 +14,6 @@ namespace Code.Gameplay.StaticData
     GameObject GetWindowPrefab(WindowId id);
     List<ShopItemConfig> GetShopItemsConfig();
     CostToContinuePlayingConfig GetCostToContinuePlayingConfig();
+    DebugGameSettings GetDebugGameSettings();
   }
 }

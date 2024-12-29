@@ -110,9 +110,16 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
                 case TileTypeId.powerUpHorizontalRocket:
                     entity.PowerUpHorizontalRocketAnimation.TilesOnDestroy(entity);
                     break;
+                
+                
+                // case TileTypeId.powerUpBomb:
+                //     entity.PowerUpBombAnimation.TilesOnDestroy(entity);
+                //     break;
                 case TileTypeId.powerUpBomb:
-                    entity.PowerUpBombAnimation.TilesOnDestroy(entity);
+                    entity.BaseTileAnimation.TilesOnDestroy(entity);
                     break;
+                
+                
                 case TileTypeId.powerUpMagicBall:
                     entity.MagicBallTileAnimation.TilesOnDestroy(entity);
                     break;

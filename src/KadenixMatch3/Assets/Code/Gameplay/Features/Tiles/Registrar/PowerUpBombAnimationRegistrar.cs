@@ -8,7 +8,7 @@ namespace Code.Gameplay.Features.Tiles.Registrar
     [RequireComponent(typeof(PowerUpBombAnimation))]
     public class PowerUpBombAnimationRegistrar : EntityComponentRegistrar
     {
-        public PowerUpBombAnimation PowerUpBombAnimation;
+        public BaseTileAnimation PowerUpBombAnimation;
         
         private void OnValidate()
         {
@@ -16,18 +16,18 @@ namespace Code.Gameplay.Features.Tiles.Registrar
                 EntityView = GetComponentInChildren<EntityBehaviour>();
             
             if (PowerUpBombAnimation == null) 
-                PowerUpBombAnimation = GetComponentInChildren<PowerUpBombAnimation>();
+                PowerUpBombAnimation = GetComponentInChildren<BaseTileAnimation>();
         }
         
         public override void RegisterComponents()
         {
-            Entity.AddPowerUpBombAnimation(PowerUpBombAnimation);
+            Entity.AddBaseTileAnimation(PowerUpBombAnimation);
         }
 
         public override void UnregisterComponents()
         {
-            if (Entity.hasPowerUpBombAnimation)
-                Entity.RemovePowerUpBombAnimation();
+            if (Entity.hasBaseTileAnimation)
+                Entity.RemoveBaseTileAnimation();
         }
     }
 }

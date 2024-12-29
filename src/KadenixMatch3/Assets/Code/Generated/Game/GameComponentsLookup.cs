@@ -114,22 +114,23 @@ public static class GameComponentsLookup {
     public const int TileNotActivatedAfterSwap = 103;
     public const int TilesSkillSwap = 104;
     public const int SpawnerTilesPool = 105;
-    public const int ColoredTileAnimation = 106;
-    public const int MagicBallTileAnimation = 107;
-    public const int PowerUpBombAnimation = 108;
-    public const int PowerUpHorizontalRocketAnimation = 109;
-    public const int PowerUpVerticalRocketAnimation = 110;
-    public const int AccelerationTime = 111;
-    public const int CanFall = 112;
-    public const int EndFalling = 113;
-    public const int FallDelay = 114;
-    public const int FallDirection = 115;
-    public const int FallingSpeed = 116;
-    public const int ProcessedFalling = 117;
-    public const int SpeedFall = 118;
-    public const int StartedFalling = 119;
+    public const int BaseTileAnimation = 106;
+    public const int ColoredTileAnimation = 107;
+    public const int MagicBallTileAnimation = 108;
+    public const int PowerUpBombAnimation = 109;
+    public const int PowerUpHorizontalRocketAnimation = 110;
+    public const int PowerUpVerticalRocketAnimation = 111;
+    public const int AccelerationTime = 112;
+    public const int CanFall = 113;
+    public const int EndFalling = 114;
+    public const int FallDelay = 115;
+    public const int FallDirection = 116;
+    public const int FallingSpeed = 117;
+    public const int ProcessedFalling = 118;
+    public const int SpeedFall = 119;
+    public const int StartedFalling = 120;
 
-    public const int TotalComponents = 120;
+    public const int TotalComponents = 121;
 
     public static readonly string[] componentNames = {
         "AddViewProcess",
@@ -238,6 +239,7 @@ public static class GameComponentsLookup {
         "TileNotActivatedAfterSwap",
         "TilesSkillSwap",
         "SpawnerTilesPool",
+        "BaseTileAnimation",
         "ColoredTileAnimation",
         "MagicBallTileAnimation",
         "PowerUpBombAnimation",
@@ -361,6 +363,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.SkillCharacter.TileNotActivatedAfterSwap),
         typeof(Code.Gameplay.Features.SkillCharacter.TilesSkillSwap),
         typeof(Code.Gameplay.Features.TileGenerationFeature.SpawnerTilesPool),
+        typeof(Code.Gameplay.Features.Tiles.BaseTileAnimationComponent),
         typeof(Code.Gameplay.Features.Tiles.ColoredTileAnimationComponent),
         typeof(Code.Gameplay.Features.Tiles.MagicBallTileAnimationComponent),
         typeof(Code.Gameplay.Features.Tiles.PowerUpBombAnimationComponent),

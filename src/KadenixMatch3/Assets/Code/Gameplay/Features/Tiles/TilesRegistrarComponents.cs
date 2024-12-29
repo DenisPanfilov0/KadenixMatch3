@@ -8,4 +8,6 @@ namespace Code.Gameplay.Features.Tiles
     [Game] public class PowerUpVerticalRocketAnimationComponent : IComponent { public PowerUpVerticalRocketAnimation Value; }
     [Game] public class PowerUpBombAnimationComponent : IComponent { public PowerUpBombAnimation Value; }
     [Game] public class MagicBallTileAnimationComponent : IComponent { public MagicBallTileAnimation Value; }
+    
+    [Game] public class BaseTileAnimationComponent : IComponent { public BaseTileAnimation Value; }
 }
