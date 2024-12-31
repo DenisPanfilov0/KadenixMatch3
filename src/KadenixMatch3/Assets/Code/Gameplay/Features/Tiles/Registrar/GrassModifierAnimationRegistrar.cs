@@ -5,17 +5,17 @@ namespace Code.Gameplay.Features.Tiles.Registrar
 {
     public class GrassModifierAnimationRegistrar : EntityComponentRegistrar
     {
-        public GrassModifierAnimation GrassModifierAnimation;
+        public BaseTileAnimation GrassModifierAnimation;
         
         public override void RegisterComponents()
         {
-            Entity.AddGrassModifierAnimation(GrassModifierAnimation);
+            Entity.AddBaseTileAnimation(GrassModifierAnimation);
         }
 
         public override void UnregisterComponents()
         {
-            if (Entity.hasGrassModifierAnimation)
-                Entity.RemoveGrassModifierAnimation();
+            if (Entity.hasBaseTileAnimation)
+                Entity.RemoveBaseTileAnimation();
         }
     }
 }

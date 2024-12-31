@@ -8,7 +8,7 @@ namespace Code.Gameplay.Features.Tiles.Registrar
     [RequireComponent(typeof(PowerUpVerticalRocketAnimation))]
     public class PowerUpVerticalRocketAnimationRegistrar : EntityComponentRegistrar
     {
-        public PowerUpVerticalRocketAnimation PowerUpVerticalRocketAnimation;
+        public BaseTileAnimation PowerUpVerticalRocketAnimation;
         
         private void OnValidate()
         {
@@ -16,18 +16,18 @@ namespace Code.Gameplay.Features.Tiles.Registrar
                 EntityView = GetComponentInChildren<EntityBehaviour>();
             
             if (PowerUpVerticalRocketAnimation == null) 
-                PowerUpVerticalRocketAnimation = GetComponentInChildren<PowerUpVerticalRocketAnimation>();
+                PowerUpVerticalRocketAnimation = GetComponentInChildren<BaseTileAnimation>();
         }
         
         public override void RegisterComponents()
         {
-            Entity.AddPowerUpVerticalRocketAnimation(PowerUpVerticalRocketAnimation);
+            Entity.AddBaseTileAnimation(PowerUpVerticalRocketAnimation);
         }
 
         public override void UnregisterComponents()
         {
-            if (Entity.hasPowerUpVerticalRocketAnimation)
-                Entity.RemovePowerUpVerticalRocketAnimation();
+            if (Entity.hasBaseTileAnimation)
+                Entity.RemoveBaseTileAnimation();
         }
     }
 }

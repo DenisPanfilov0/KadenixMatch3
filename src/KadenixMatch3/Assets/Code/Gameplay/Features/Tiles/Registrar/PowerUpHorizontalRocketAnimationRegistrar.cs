@@ -8,7 +8,7 @@ namespace Code.Gameplay.Features.Tiles.Registrar
     [RequireComponent(typeof(PowerUpHorizontalRocketAnimation))]
     public class PowerUpHorizontalRocketAnimationRegistrar : EntityComponentRegistrar
     {
-        public PowerUpHorizontalRocketAnimation PowerUpHorizontalRocketAnimation;
+        public BaseTileAnimation PowerUpHorizontalRocketAnimation;
         
         private void OnValidate()
         {
@@ -16,18 +16,18 @@ namespace Code.Gameplay.Features.Tiles.Registrar
                 EntityView = GetComponentInChildren<EntityBehaviour>();
             
             if (PowerUpHorizontalRocketAnimation == null) 
-                PowerUpHorizontalRocketAnimation = GetComponentInChildren<PowerUpHorizontalRocketAnimation>();
+                PowerUpHorizontalRocketAnimation = GetComponentInChildren<BaseTileAnimation>();
         }
         
         public override void RegisterComponents()
         {
-            Entity.AddPowerUpHorizontalRocketAnimation(PowerUpHorizontalRocketAnimation);
+            Entity.AddBaseTileAnimation(PowerUpHorizontalRocketAnimation);
         }
 
         public override void UnregisterComponents()
         {
-            if (Entity.hasPowerUpHorizontalRocketAnimation)
-                Entity.RemovePowerUpHorizontalRocketAnimation();
+            if (Entity.hasBaseTileAnimation)
+                Entity.RemoveBaseTileAnimation();
         }
     }
 }

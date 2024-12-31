@@ -14,6 +14,7 @@ namespace Code.Gameplay.Features.Input
             Add(systems.Create<InputPowerUpSwapSystem>());
             
             Add(systems.Create<TileSwipeProcessedSystem>());
+            Add(systems.Create<TileSwipeFinishedSystem>());
             
             Add(systems.Create<UpdateTransformPositionSystem>());
         }

@@ -99,37 +99,39 @@ public static class GameComponentsLookup {
     public const int SecondSelectTileSwipe = 88;
     public const int SwipeDirection = 89;
     public const int TileForDoubleClick = 90;
-    public const int TileSwipeProcessed = 91;
-    public const int AutoActiveTile = 92;
-    public const int PowerUpFigureType = 93;
-    public const int PowerUpGenerated = 94;
-    public const int PowerUpSpawnAnimation = 95;
-    public const int TileForPowerUpGeneration = 96;
-    public const int TileForPowerUpGenerationByType = 97;
-    public const int CharacterSkillActivationRequest = 98;
-    public const int CharacterSkillProcessed = 99;
-    public const int CrossDestructionSkillRequest = 100;
-    public const int HandSkillRequest = 101;
-    public const int SwapSkillRequest = 102;
-    public const int TileNotActivatedAfterSwap = 103;
-    public const int TilesSkillSwap = 104;
-    public const int SpawnerTilesPool = 105;
-    public const int ColoredTileAnimation = 106;
-    public const int MagicBallTileAnimation = 107;
-    public const int PowerUpBombAnimation = 108;
-    public const int PowerUpHorizontalRocketAnimation = 109;
-    public const int PowerUpVerticalRocketAnimation = 110;
-    public const int AccelerationTime = 111;
-    public const int CanFall = 112;
-    public const int EndFalling = 113;
-    public const int FallDelay = 114;
-    public const int FallDirection = 115;
-    public const int FallingSpeed = 116;
-    public const int ProcessedFalling = 117;
-    public const int SpeedFall = 118;
-    public const int StartedFalling = 119;
+    public const int TileSwipeFinished = 91;
+    public const int TileSwipeProcessed = 92;
+    public const int AutoActiveTile = 93;
+    public const int PowerUpFigureType = 94;
+    public const int PowerUpGenerated = 95;
+    public const int PowerUpSpawnAnimation = 96;
+    public const int TileForPowerUpGeneration = 97;
+    public const int TileForPowerUpGenerationByType = 98;
+    public const int CharacterSkillActivationRequest = 99;
+    public const int CharacterSkillProcessed = 100;
+    public const int CrossDestructionSkillRequest = 101;
+    public const int HandSkillRequest = 102;
+    public const int SwapSkillRequest = 103;
+    public const int TileNotActivatedAfterSwap = 104;
+    public const int TilesSkillSwap = 105;
+    public const int SpawnerTilesPool = 106;
+    public const int BaseTileAnimation = 107;
+    public const int ColoredTileAnimation = 108;
+    public const int MagicBallTileAnimation = 109;
+    public const int PowerUpBombAnimation = 110;
+    public const int PowerUpHorizontalRocketAnimation = 111;
+    public const int PowerUpVerticalRocketAnimation = 112;
+    public const int AccelerationTime = 113;
+    public const int CanFall = 114;
+    public const int EndFalling = 115;
+    public const int FallDelay = 116;
+    public const int FallDirection = 117;
+    public const int FallingSpeed = 118;
+    public const int ProcessedFalling = 119;
+    public const int SpeedFall = 120;
+    public const int StartedFalling = 121;
 
-    public const int TotalComponents = 120;
+    public const int TotalComponents = 122;
 
     public static readonly string[] componentNames = {
         "AddViewProcess",
@@ -223,6 +225,7 @@ public static class GameComponentsLookup {
         "SecondSelectTileSwipe",
         "SwipeDirection",
         "TileForDoubleClick",
+        "TileSwipeFinished",
         "TileSwipeProcessed",
         "AutoActiveTile",
         "PowerUpFigureType",
@@ -238,6 +241,7 @@ public static class GameComponentsLookup {
         "TileNotActivatedAfterSwap",
         "TilesSkillSwap",
         "SpawnerTilesPool",
+        "BaseTileAnimation",
         "ColoredTileAnimation",
         "MagicBallTileAnimation",
         "PowerUpBombAnimation",
@@ -346,6 +350,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Input.SecondSelectTileSwipe),
         typeof(Code.Gameplay.Features.Input.SwipeDirection),
         typeof(Code.Gameplay.Features.Input.TileForDoubleClick),
+        typeof(Code.Gameplay.Features.Input.TileSwipeFinished),
         typeof(Code.Gameplay.Features.Input.TileSwipeProcessed),
         typeof(Code.Gameplay.Features.PowerUpGeneratedFeature.AutoActiveTile),
         typeof(Code.Gameplay.Features.PowerUpGeneratedFeature.PowerUpFigureType),
@@ -361,6 +366,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.SkillCharacter.TileNotActivatedAfterSwap),
         typeof(Code.Gameplay.Features.SkillCharacter.TilesSkillSwap),
         typeof(Code.Gameplay.Features.TileGenerationFeature.SpawnerTilesPool),
+        typeof(Code.Gameplay.Features.Tiles.BaseTileAnimationComponent),
         typeof(Code.Gameplay.Features.Tiles.ColoredTileAnimationComponent),
         typeof(Code.Gameplay.Features.Tiles.MagicBallTileAnimationComponent),
         typeof(Code.Gameplay.Features.Tiles.PowerUpBombAnimationComponent),

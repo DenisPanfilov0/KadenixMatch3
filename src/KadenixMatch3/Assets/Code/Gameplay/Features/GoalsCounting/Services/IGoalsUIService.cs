@@ -15,5 +15,6 @@ namespace Code.Gameplay.Features.GoalsCounting.UI
         void AddGoalInPool(GoalItem goal);
         Transform GetGoalTransform(TileTypeId goalType);
         void Cleanup();
+        void TileSwap(GameEntity entity, Vector3 direction);
     }
 }

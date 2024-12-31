@@ -20,7 +20,8 @@ namespace Code.Gameplay.Features.Input.Systems
                 .AllOf(
                     GameMatcher.TileSwipeProcessed,
                     GameMatcher.WorldPosition,
-                    GameMatcher.SwipeDirection));
+                    GameMatcher.SwipeDirection)
+                .NoneOf(GameMatcher.AnimationProcess, GameMatcher.TileSwipeFinished));
 
             _moves = game.GetGroup(GameMatcher.AllOf(GameMatcher.Moves, GameMatcher.MovesChangeAmountProcess));
         }
@@ -29,53 +30,9 @@ namespace Code.Gameplay.Features.Input.Systems
         {
             foreach (var tileSwiping in _tilesSwiping.GetEntities(_buffer))
             {
-                var targetPosition = new Vector3(tileSwiping.BoardPosition.x, tileSwiping.BoardPosition.y);
-                var currentPosition = tileSwiping.WorldPosition;
-                var distance = Vector3.Distance(currentPosition, targetPosition);
-
-                if (distance >= 0.01f)
-                {
-                    var step = tileSwiping.SwipeDirection * 10f * _time.DeltaTime;
-                    
-                    if (step.magnitude >= distance)
-                    {
-                        tileSwiping.ReplaceWorldPosition(targetPosition);
-                    }
-                    else
-                    {
-                        tileSwiping.ReplaceWorldPosition(currentPosition + step);
-                    }
-                }
-                else
-                {
-                    if (tileSwiping.isTilePowerUp)
-                    {
-                        if (!tileSwiping.isTileNotActivatedAfterSwap)
-                        {
-                            tileSwiping.isActiveInteraction = true;
-                            // tileSwiping.isGoalCheck = true;
-                        }
-                        else
-                        {
-                            tileSwiping.isTileNotActivatedAfterSwap = false;
-                        }
-                        
-                        tileSwiping.isFirstSelectTileSwipe = false;
-                        tileSwiping.isSecondSelectTileSwipe = false;
-                    }
-                    else
-                    {
-                        tileSwiping.isFindMatches = true;
-                        tileSwiping.TileTweenAnimation.SaveTransform();
-
-                        foreach (GameEntity move in _moves.GetEntities(_bufferMoves))
-                        {
-                            move.isMovesChangeAmountProcess = false;
-                        }
-                    }
-                    
-                    tileSwiping.isTileSwipeProcessed = false;
-                }
+                tileSwiping.ReplaceWorldPosition(new Vector3(tileSwiping.BoardPosition.x, tileSwiping.BoardPosition.y));
+                tileSwiping.BaseTileAnimation.TileSwap(tileSwiping, tileSwiping.SwipeDirection);
+                tileSwiping.isAnimationProcess = true;
             }
         }
     }
