@@ -40,96 +40,19 @@ namespace Code.Gameplay.Features.GoalsCounting.Services
             return null;
         }
 
+        public void TileSwap(GameEntity entity, Vector3 direction)
+        {
+            entity.BaseTileAnimation.TileSwap(entity, direction);
+        }
+
         public void ChangeGoalCount(GameEntity entity, int amount)
         {
-            switch (entity.TileType)
-            {
-                case TileTypeId.coloredRed:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.coloredYellow:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.coloredBlue:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.coloredGreen:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.coloredPurple:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.tileModifierSpawner:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.powerUpVerticalRocket:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.powerUpHorizontalRocket:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.powerUpBomb:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.grassModifier:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-                case TileTypeId.iceModifier:
-                    entity.ColoredTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
-                    break;
-            }
-            
-            // OnChangeGoal?.Invoke(entity.TileType, amount);
+            entity.BaseTileAnimation.MoveTileToTarget(entity, () => { InvokeGoalChange(entity, 1);});
         }
         
         public void ActiveAndDestroy(GameEntity entity)
         {
-            switch (entity.TileType)
-            {
-                case TileTypeId.coloredRed:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.coloredYellow:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.coloredBlue:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.coloredGreen:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.coloredPurple:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.tileModifierSpawner:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.powerUpVerticalRocket:
-                    entity.PowerUpVerticalRocketAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.powerUpHorizontalRocket:
-                    entity.PowerUpHorizontalRocketAnimation.TilesOnDestroy(entity);
-                    break;
-                
-                
-                // case TileTypeId.powerUpBomb:
-                //     entity.PowerUpBombAnimation.TilesOnDestroy(entity);
-                //     break;
-                case TileTypeId.powerUpBomb:
-                    entity.BaseTileAnimation.TilesOnDestroy(entity);
-                    break;
-                
-                
-                case TileTypeId.powerUpMagicBall:
-                    entity.MagicBallTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.grassModifier:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-                case TileTypeId.iceModifier:
-                    entity.ColoredTileAnimation.TilesOnDestroy(entity);
-                    break;
-            }
+            entity.BaseTileAnimation.TilesOnDestroy(entity);
         }
 
         public void Cleanup()

@@ -1,20 +1,21 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Tiles.Behaviours
 {
-    public class GrassModifierAnimation : MonoBehaviour
+    public class GrassModifierAnimation : BaseTileAnimation
     {
         public SpriteRenderer SpriteRenderer;
         public List<Sprite> Sprites;
 
-        public void DurabilityChange(GameEntity entity)
+        public override void DurabilityChange(GameEntity entity)
         {
             SpriteRenderer.sprite = Sprites[entity.TileDurability - 1];
         }
 
-        public void TilesOnDestroy(GameEntity entity)
+        public override void TilesOnDestroy(GameEntity entity, Action callback = null)
         {
             Sequence sequence = DOTween.Sequence();
 

@@ -104,14 +104,17 @@ namespace Code.Gameplay.Features.Input.Systems
                     {
                         Debug.Log("Ходов не было");
 
-                        // firstSelectTile.isTileSwipeProcessed = false;
-                        // secondSelectTile.isTileSwipeProcessed = false;
+                        firstSelectTile.isTileSwipeProcessed = false;
+                        secondSelectTile.isTileSwipeProcessed = false;
 
                         firstSelectTile.ReplaceBoardPosition(firstTilePosition);
                         secondSelectTile.ReplaceBoardPosition(secondTilePosition);
 
                         secondSelectTile.ReplacePositionInCoverageQueue(firstTileQueue);
                         firstSelectTile.ReplacePositionInCoverageQueue(secondTileQueue);
+
+                        firstSelectTile.isFirstSelectTileSwipe = false;
+                        secondSelectTile.isSecondSelectTileSwipe = false;
 
                         // firstSelectTile.ReplaceSwipeDirection(
                         //     new Vector3(secondSelectTile.BoardPosition.x, secondSelectTile.BoardPosition.y)
@@ -120,6 +123,9 @@ namespace Code.Gameplay.Features.Input.Systems
                         // secondSelectTile.ReplaceSwipeDirection(
                         //     new Vector3(firstSelectTile.BoardPosition.x, firstSelectTile.BoardPosition.y)
                         //     - new Vector3(secondSelectTile.BoardPosition.x, secondSelectTile.BoardPosition.y));
+                        
+                        // firstSelectTile.isTileSwipeProcessed = false;
+                        // secondSelectTile.isTileSwipeProcessed = false;
 
                         return;
                     }

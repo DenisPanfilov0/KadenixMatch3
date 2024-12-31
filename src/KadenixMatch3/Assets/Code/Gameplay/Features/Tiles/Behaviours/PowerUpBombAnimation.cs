@@ -17,7 +17,7 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
         {
             _goalsUIService = goalsUIService;
         }
-
+        
         public override void TilesOnDestroy(GameEntity entity, Action callback = null)
         {
             Sequence sequence = DOTween.Sequence();
@@ -36,14 +36,6 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                         callback?.Invoke();
                     }
                 });
-        }
-    }
-    
-    public class BaseTileAnimation : MonoBehaviour
-    {
-        public virtual void TilesOnDestroy(GameEntity entity, Action callback = null)
-        {
-            
         }
     }
 }

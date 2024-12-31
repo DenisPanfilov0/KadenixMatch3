@@ -8,7 +8,7 @@ namespace Code.Gameplay.Features.Tiles.Registrar
     [RequireComponent(typeof(ColoredTileAnimation))]
     public class ColoredTileAnimationRegistrar : EntityComponentRegistrar
     {
-        public ColoredTileAnimation ColoredTileAnimation;
+        public BaseTileAnimation ColoredTileAnimation;
         
         private void OnValidate()
         {
@@ -16,18 +16,18 @@ namespace Code.Gameplay.Features.Tiles.Registrar
                 EntityView = GetComponentInChildren<EntityBehaviour>();
             
             if (ColoredTileAnimation == null) 
-                ColoredTileAnimation = GetComponentInChildren<ColoredTileAnimation>();
+                ColoredTileAnimation = GetComponentInChildren<BaseTileAnimation>();
         }
         
         public override void RegisterComponents()
         {
-            Entity.AddColoredTileAnimation(ColoredTileAnimation);
+            Entity.AddBaseTileAnimation(ColoredTileAnimation);
         }
 
         public override void UnregisterComponents()
         {
-            if (Entity.hasColoredTileAnimation)
-                Entity.RemoveColoredTileAnimation();
+            if (Entity.hasBaseTileAnimation)
+                Entity.RemoveBaseTileAnimation();
         }
     }
 }

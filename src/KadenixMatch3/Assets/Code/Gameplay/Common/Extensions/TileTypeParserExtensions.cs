@@ -36,6 +36,11 @@ namespace Code.Gameplay.Common.Extension
             {"coloredRed", TileTypeId.coloredRed },
             {"coloredYellow", TileTypeId.coloredYellow },
             
+            {"powerUpBomb", TileTypeId.powerUpBomb },
+            {"powerUpHorizontalRocket", TileTypeId.powerUpHorizontalRocket },
+            {"powerUpVerticalRocket", TileTypeId.powerUpVerticalRocket },
+            {"powerUpMagicBall", TileTypeId.powerUpMagicBall },
+            
             {"tileModifierSpawner", TileTypeId.tileModifierSpawner },
             {"grassModifier", TileTypeId.grassModifier },
             

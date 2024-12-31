@@ -7,9 +7,9 @@ using Zenject;
 
 namespace Code.Gameplay.Features.Tiles.Behaviours
 {
-    public class ColoredTileAnimation : MonoBehaviour
+    public class ColoredTileAnimation : BaseTileAnimation
     {
-        [SerializeField] private ParticleSystem _explosionPartical;
+        [SerializeField] private ParticleSystem _explosionParticle;
         
         private IGoalsUIService _goalsUIService;
 
@@ -19,11 +19,11 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
             _goalsUIService = goalsUIService;
         }
 
-        public void TilesOnDestroy(GameEntity entity, Action callback = null)
+        public override void TilesOnDestroy(GameEntity entity, Action callback = null)
         {
             Sequence sequence = DOTween.Sequence();
 
-            ParticleSystem particle = Instantiate(_explosionPartical, transform.parent);
+            ParticleSystem particle = Instantiate(_explosionParticle, transform.parent);
             particle.transform.position = transform.position;
 
             sequence.Append(transform.DOScale(Vector3.zero, 0.1f).SetEase(Ease.OutQuad))
@@ -39,7 +39,7 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
                 });
         }
 
-        public void MoveTileToTarget(GameEntity entity, Action callback = null)
+        public override void MoveTileToTarget(GameEntity entity, Action callback = null)
         {
             GetComponent<SpriteRenderer>().enabled = false;
 

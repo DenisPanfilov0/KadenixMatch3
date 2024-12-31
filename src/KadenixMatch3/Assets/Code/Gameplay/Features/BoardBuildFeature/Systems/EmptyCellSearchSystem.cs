@@ -136,6 +136,12 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
             {TileTypeId.coloredYellow, 3},
             {TileTypeId.coloredGreen, 4},
             {TileTypeId.coloredPurple, 5},
+            {TileTypeId.powerUpBomb, 6},
+            {TileTypeId.powerUpHorizontalRocket, 6},
+            {TileTypeId.powerUpVerticalRocket, 6},
+            {TileTypeId.powerUpMagicBall, 6},
+            {TileTypeId.iceModifier, 10},
+            {TileTypeId.grassModifier, 11},
         };
     }
 }

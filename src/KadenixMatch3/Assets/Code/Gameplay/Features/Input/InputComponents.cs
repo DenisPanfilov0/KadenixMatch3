@@ -14,5 +14,6 @@ namespace Code.Gameplay.Features.Input
     [Game, Unique] public class TileForDoubleClick : IComponent {  }
     
     [Game] public class TileSwipeProcessed : IComponent {  }
+    [Game] public class TileSwipeFinished : IComponent {  }
     [Game] public class SwipeDirection : IComponent { public Vector3 Value; }
 }

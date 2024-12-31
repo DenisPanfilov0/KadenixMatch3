@@ -43,8 +43,9 @@ namespace Code.Meta.Feature.Shop.Services
 
         public void BuyItem(ShopItemConfig config, WindowId id)
         {
-            if (_progress.ProgressData.ProgressModel.Coins > 0)
+            if (_progress.ProgressData.ProgressModel.Coins >= config.Price)
             {
+                _progress.ProgressData.ProgressModel.Coins -= config.Price;
                 GetItemByTypeId(config);
                 ItemPurchased?.Invoke(/*config.ShopItemId*/);
                 CloseWindow(id);
@@ -55,11 +56,23 @@ namespace Code.Meta.Feature.Shop.Services
         {
             switch (config.ShopItemId)
             {
-                case ShopItemId.HandSkill:
-                    _progress.ProgressData.ProgressModel.CharacterBoosters.HandSkill += config.Amount;
+                case ShopItemId.PreBoosterBomb:
+                    _progress.ProgressData.ProgressModel.CharacterPreBoosters.PreBoosterBomb += config.Amount;
                     break;
+                case ShopItemId.PreBoosterLinearLightning:
+                    _progress.ProgressData.ProgressModel.CharacterPreBoosters.PreBoosterLinearLightning += config.Amount;
+                    break;
+                case ShopItemId.PreBoosterMagicBall:
+                    _progress.ProgressData.ProgressModel.CharacterPreBoosters.PreBoosterMagicBall += config.Amount;
+                    break;
+                case ShopItemId.HandSkill:
+                    _progress.ProgressData.ProgressModel.CharacterSkills.HandSkill += config.Amount;
+                    break;                
                 case ShopItemId.SwapSkill:
-                    _progress.ProgressData.ProgressModel.CharacterBoosters.SwapSkill += config.Amount;
+                    _progress.ProgressData.ProgressModel.CharacterSkills.SwapSkill += config.Amount;
+                    break;                
+                case ShopItemId.DamageAllBoardSkill:
+                    _progress.ProgressData.ProgressModel.CharacterSkills.DamageAllBoardSkill += config.Amount;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

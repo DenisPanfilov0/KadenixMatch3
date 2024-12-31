@@ -13,6 +13,7 @@ namespace Code.Gameplay.Features.BoardBuildFeature
             Add(systems.Create<TileContentModifierCreateSystem>());
             
             Add(systems.Create<EmptyCellSearchSystem>());
+            Add(systems.Create<PreBoosterGeneratedSystem>());
             Add(systems.Create<EmptyCellFillingSystem>());
             Add(systems.Create<FillEmptyCellSystem>());
         }

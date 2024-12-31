@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Code.Gameplay.Features.Tiles.Behaviours
 {
-    public class PowerUpVerticalRocketAnimation : MonoBehaviour
+    public class PowerUpVerticalRocketAnimation : BaseTileAnimation
     {
         [SerializeField] private ParticleSystem _explosionPartical;
         
@@ -18,7 +18,7 @@ namespace Code.Gameplay.Features.Tiles.Behaviours
             _goalsUIService = goalsUIService;
         }
 
-        public void TilesOnDestroy(GameEntity entity, Action callback = null)
+        public override void TilesOnDestroy(GameEntity entity, Action callback = null)
         {
             Sequence sequence = DOTween.Sequence();
 

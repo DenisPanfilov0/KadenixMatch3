@@ -40,8 +40,9 @@ namespace Code.Meta.Feature.StartLevel.Service
         {
             _shopItemParser = new()
             {
-                { ShopItemId.HandSkill, _progress.ProgressData.ProgressModel.CharacterBoosters.HandSkill},
-                { ShopItemId.SwapSkill, _progress.ProgressData.ProgressModel.CharacterBoosters.SwapSkill}
+                { ShopItemId.PreBoosterBomb, _progress.ProgressData.ProgressModel.CharacterPreBoosters.PreBoosterBomb},
+                { ShopItemId.PreBoosterLinearLightning, _progress.ProgressData.ProgressModel.CharacterPreBoosters.PreBoosterLinearLightning},
+                { ShopItemId.PreBoosterMagicBall, _progress.ProgressData.ProgressModel.CharacterPreBoosters.PreBoosterMagicBall}
             };
         }
 
@@ -57,7 +58,7 @@ namespace Code.Meta.Feature.StartLevel.Service
         {
             if (GetAmountItemShop(itemId) > 0)
             {
-                if (_boostersSelected.Contains(itemId))
+                if (!_boostersSelected.Contains(itemId))
                 {
                     _boostersSelected.Add(itemId);
                 }
@@ -80,6 +81,13 @@ namespace Code.Meta.Feature.StartLevel.Service
             {
                 _stateMachine.Enter<LoadingMatch3State, string>(BattleSceneName);
                 _characterHeartUIService.DecreaseHeart(1);
+
+                foreach (var booster in _boostersSelected)
+                {
+                    _progress.ProgressData.ProgressModel.PreBoostersSelectedInLevel.Add(booster);
+                }
+                
+                _boostersSelected.Clear();
             }
         }
     }

@@ -5,17 +5,17 @@ namespace Code.Gameplay.Features.Tiles.Registrar
 {
     public class IceModifierAnimationRegistrar : EntityComponentRegistrar
     {
-        public IceModifierAnimation IceModifierAnimation;
+        public BaseTileAnimation IceModifierAnimation;
         
         public override void RegisterComponents()
         {
-            Entity.AddIceModifierAnimation(IceModifierAnimation);
+            Entity.AddBaseTileAnimation(IceModifierAnimation);
         }
 
         public override void UnregisterComponents()
         {
-            if (Entity.hasIceModifierAnimation)
-                Entity.RemoveIceModifierAnimation();
+            if (Entity.hasBaseTileAnimation)
+                Entity.RemoveBaseTileAnimation();
         }
     }
 }
