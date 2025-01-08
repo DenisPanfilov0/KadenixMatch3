@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Code.Gameplay.Features.BoardBuildFeature;
 using Code.Gameplay.Features.FindMatchesFeature;
@@ -8,8 +9,17 @@ namespace Code.Gameplay.Common.Extension
     {
         public static TileTypeId TileTypeResolve(string tileName)
         {
-            _tileNameType.TryGetValue(tileName, out TileTypeId tileType);
-            return tileType;
+            try
+            {
+                _tileNameType.TryGetValue(tileName, out TileTypeId tileType);
+                return tileType;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }        
         
         public static TileTypeId TileTypeResolve(FigureTypeId tileName)

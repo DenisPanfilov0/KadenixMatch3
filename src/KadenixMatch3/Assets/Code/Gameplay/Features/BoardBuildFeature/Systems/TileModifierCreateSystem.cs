@@ -34,6 +34,9 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
 
             foreach (var tile in lvl.boardState)
             {
+                if (tile == null || (tile.tileContentModifiers == null && tile.tileModifiers == null && tile.tileType == null && tile.tileContentType == null))
+                    continue;
+                
                 foreach (var modifier in tile.tileModifiers)
                 {
                     if (modifier.tileModifierType == TileTypeId.tileModifierSpawner.ToString())
