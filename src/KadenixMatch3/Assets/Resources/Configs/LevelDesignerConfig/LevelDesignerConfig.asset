@@ -76,7 +76,7 @@ MonoBehaviour:
   - Sprite: {fileID: 21300000, guid: 4205cebc9093bb741a617788998c1476, type: 3}
     Type: 14
     Durability: 1
-    TileType: 2
+    TileType: 3
     Layer: 2
   - Sprite: {fileID: 21300000, guid: 1a44d05763f5d264eaf3627493779e9c, type: 3}
     Type: 8
