@@ -26,7 +26,7 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     if (tileInteraction.TileDurability > 1)
                     {
                         tileInteraction.ReplaceTileDurability(tileInteraction.TileDurability - 1);
-                        tileInteraction.IceModifierAnimation.DurabilityChange(tileInteraction);
+                        tileInteraction.BaseTileAnimation.DurabilityChange(tileInteraction);
                     }
                     else if (tileInteraction.TileDurability == 1)
                     {
@@ -35,6 +35,11 @@ namespace Code.Gameplay.Features.ActiveInteractionFeature.Systems
                     }
                 }
 
+                if (tileInteraction.hasTilesInShape)
+                {
+                    tileInteraction.RemoveTilesInShape();
+                }
+                
                 tileInteraction.isActiveInteraction = false;
                 tileInteraction.ReplaceDamageReceived(0);
             }

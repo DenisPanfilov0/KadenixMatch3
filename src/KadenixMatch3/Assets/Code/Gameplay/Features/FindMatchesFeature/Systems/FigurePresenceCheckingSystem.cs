@@ -46,7 +46,7 @@ namespace Code.Gameplay.Features.FindMatchesFeature.Systems
                                 // match.isAnimationProcess = true;
                                 match.ReplaceDamageReceived(match.DamageReceived + 1);
                                 match.isActiveInteraction = true;
-                                match.isGoalCheck = true;
+                                // match.isGoalCheck = true;
                                 // match.TileTweenAnimation.TilesOnDestroy(match);
                                 // match.isDestructedProcess = true;
                             }
