@@ -21,9 +21,9 @@ namespace Code.Gameplay.Features.ActiveStartStateTilesFeature.Systems
         {
             foreach (GameEntity tileActiveState in _tilesActiveState.GetEntities(_buffer))
             {
-                if (tileActiveState.hasIceModifierAnimation)
+                if (tileActiveState.hasBaseTileAnimation)
                 {
-                    tileActiveState.IceModifierAnimation.DurabilityChange(tileActiveState);
+                    tileActiveState.BaseTileAnimation.DurabilityChange(tileActiveState);
 
                     tileActiveState.isInactiveStartState = false;
                 }

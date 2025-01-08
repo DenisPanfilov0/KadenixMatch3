@@ -29,7 +29,7 @@ namespace Code.Progress.Data
 
     public ProgressModel()
     {
-      CurrentLevel = -3;
+      CurrentLevel = 6;
       Coins = 2000;
       Heart = 5;
       MaxHeart = 5;

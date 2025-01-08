@@ -21,9 +21,9 @@ namespace Code.Gameplay.Features.ActiveStartStateTilesFeature.Systems
         {
             foreach (GameEntity tileActiveState in _tilesActiveState.GetEntities(_buffer))
             {
-                if (tileActiveState.hasGrassModifierAnimation)
+                if (tileActiveState.hasBaseTileAnimation)
                 {
-                    tileActiveState.GrassModifierAnimation.DurabilityChange(tileActiveState);
+                    tileActiveState.BaseTileAnimation.DurabilityChange(tileActiveState);
 
                     tileActiveState.isInactiveStartState = false;
                 }
