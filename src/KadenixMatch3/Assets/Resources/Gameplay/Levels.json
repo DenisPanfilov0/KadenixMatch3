@@ -2583,96 +2583,6 @@
     {
       "boardState": [
         {
-          "xPos": 1,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 2,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 3,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 4,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 5,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 6,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 7,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 8,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 9,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 1,
-          "yPos": 2,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
           "xPos": 2,
           "yPos": 2,
           "tileType": "commonLight",
@@ -2687,7 +2597,7 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredGreen",
           "tileContentDurability": 1
         },
         {
@@ -2696,7 +2606,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredGreen",
           "tileContentDurability": 1
         },
         {
@@ -2705,7 +2615,7 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
+          "tileContentType": "coloredRed",
           "tileContentDurability": 1
         },
         {
@@ -2714,7 +2624,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredGreen",
           "tileContentDurability": 1
         },
         {
@@ -2723,7 +2633,7 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredGreen",
           "tileContentDurability": 1
         },
         {
@@ -2736,24 +2646,6 @@
           "tileContentDurability": 1
         },
         {
-          "xPos": 9,
-          "yPos": 2,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 1,
-          "yPos": 3,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
-          "tileContentDurability": 1
-        },
-        {
           "xPos": 2,
           "yPos": 3,
           "tileType": "commonDark",
@@ -2777,7 +2669,7 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredRed",
           "tileContentDurability": 1
         },
         {
@@ -2786,7 +2678,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredBlue",
           "tileContentDurability": 1
         },
         {
@@ -2795,7 +2687,7 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredRed",
           "tileContentDurability": 1
         },
         {
@@ -2817,30 +2709,12 @@
           "tileContentDurability": 1
         },
         {
-          "xPos": 9,
-          "yPos": 3,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 1,
-          "yPos": 4,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
           "xPos": 2,
           "yPos": 4,
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
+          "tileContentType": "coloredYellow",
           "tileContentDurability": 1
         },
         {
@@ -2858,7 +2732,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredBlue",
           "tileContentDurability": 1
         },
         {
@@ -2867,7 +2741,7 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredPurple",
           "tileContentDurability": 1
         },
         {
@@ -2876,7 +2750,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredBlue",
           "tileContentDurability": 1
         },
         {
@@ -2894,25 +2768,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 9,
-          "yPos": 4,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 1,
-          "yPos": 5,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
+          "tileContentType": "coloredYellow",
           "tileContentDurability": 1
         },
         {
@@ -2930,7 +2786,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredBlue",
           "tileContentDurability": 1
         },
         {
@@ -2939,7 +2795,7 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredPurple",
           "tileContentDurability": 1
         },
         {
@@ -2948,7 +2804,7 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredYellow",
           "tileContentDurability": 1
         },
         {
@@ -2957,111 +2813,228 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredPurple",
           "tileContentDurability": 1
         },
         {
           "xPos": 7,
-          "yPos": 7,
+          "yPos": 5,
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredBlue",
           "tileContentDurability": 1
         },
         {
           "xPos": 8,
-          "yPos": 7,
+          "yPos": 5,
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 9,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 1,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredGreen",
           "tileContentDurability": 1
         },
         {
           "xPos": 2,
-          "yPos": 8,
+          "yPos": 6,
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
+          "tileContentType": "coloredBlue",
           "tileContentDurability": 1
         },
         {
           "xPos": 3,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 4,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 5,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredGreen",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 6,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 7,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredRed",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 9,
           "yPos": 6,
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 4,
+          "yPos": 6,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 6,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 6,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 6,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 8,
+          "yPos": 6,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 4,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 8,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
           "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 4,
+          "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredPurple",
           "tileContentDurability": 1
         },
         {
           "xPos": 8,
           "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 9,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 9,
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
@@ -3069,115 +3042,53 @@
           "tileContentDurability": 1
         },
         {
-          "xPos": 9,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 1,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": "coloredPurple",
-          "tileContentDurability": 1
-        },
-        {
-          "xPos": 3,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
           "xPos": 4,
           "yPos": 9,
           "tileType": "commonDark",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
+          "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         },
         {
           "xPos": 5,
           "yPos": 9,
           "tileType": "commonLight",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
+          "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 6,
           "yPos": 9,
           "tileType": "commonDark",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
+          "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": "coloredYellow",
+          "tileContentType": "coloredRed",
           "tileContentDurability": 1
         },
         {
           "xPos": 7,
           "yPos": 9,
           "tileType": "commonLight",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
+          "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         },
         {
-          "xPos": 9,
+          "xPos": 8,
           "yPos": 9,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 10,
           "tileType": "commonLight",
           "tileModifiers": [
             {
@@ -3186,12 +3097,12 @@
             }
           ],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         },
         {
-          "xPos": 8,
-          "yPos": 9,
+          "xPos": 3,
+          "yPos": 10,
           "tileType": "commonDark",
           "tileModifiers": [
             {
@@ -3200,31 +3111,94 @@
             }
           ],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
         },
         {
-          "xPos": 10,
-          "yPos": 4,
-          "tileType": null,
-          "tileModifiers": null,
-          "tileContentModifiers": null,
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "xPos": 4,
+          "yPos": 10,
+          "tileType": "commonLight",
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 10,
+          "tileType": "commonDark",
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 10,
+          "tileType": "commonLight",
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 10,
+          "tileType": "commonDark",
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredGreen",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 8,
+          "yPos": 10,
+          "tileType": "commonLight",
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         }
       ],
       "type": null,
       "generatableItems": [
-        "coloredPurple",
+        "coloredBlue",
         "coloredRed",
+        "coloredYellow",
         "coloredGreen",
-        "coloredYellow"
+        "coloredPurple"
       ],
       "goals": {
-        "coloredRed": 50,
-        "coloredPurple": 20
+        "coloredPurple": 15,
+        "coloredBlue": 15,
+        "coloredYellow": 15
       },
-      "moves": 20,
+      "moves": 25,
       "id": 4
     },
     {
@@ -3423,8 +3397,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 2,
@@ -3441,8 +3415,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 4,
@@ -3455,42 +3429,6 @@
         },
         {
           "xPos": 5,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
           "yPos": 1,
           "tileType": "commonLight",
           "tileModifiers": [],
@@ -3513,8 +3451,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 3,
@@ -3531,8 +3469,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 5,
@@ -3544,49 +3482,13 @@
           "tileContentDurability": 0
         },
         {
-          "xPos": 6,
-          "yPos": 2,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 2,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 2,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 2,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
           "xPos": 1,
           "yPos": 3,
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 2,
@@ -3603,8 +3505,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 4,
@@ -3621,44 +3523,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 3,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 3,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 3,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 3,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 1,
@@ -3675,8 +3541,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 3,
@@ -3693,8 +3559,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 5,
@@ -3711,8 +3577,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 7,
@@ -3765,8 +3631,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 4,
@@ -3783,8 +3649,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 6,
@@ -3801,8 +3667,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 8,
@@ -3826,7 +3692,12 @@
           "xPos": 1,
           "yPos": 6,
           "tileType": "commonDark",
-          "tileModifiers": [],
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
           "tileContentModifiers": [],
           "tileContentType": null,
           "tileContentDurability": 0
@@ -3835,7 +3706,12 @@
           "xPos": 2,
           "yPos": 6,
           "tileType": "commonLight",
-          "tileModifiers": [],
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
           "tileContentModifiers": [],
           "tileContentType": null,
           "tileContentDurability": 0
@@ -3844,7 +3720,12 @@
           "xPos": 3,
           "yPos": 6,
           "tileType": "commonDark",
-          "tileModifiers": [],
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
           "tileContentModifiers": [],
           "tileContentType": null,
           "tileContentDurability": 0
@@ -3853,10 +3734,15 @@
           "xPos": 4,
           "yPos": 6,
           "tileType": "commonLight",
-          "tileModifiers": [],
+          "tileModifiers": [
+            {
+              "tileModifierType": "tileModifierSpawner",
+              "durability": 1
+            }
+          ],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 5,
@@ -3873,8 +3759,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 7,
@@ -3891,8 +3777,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 9,
@@ -3904,49 +3790,13 @@
           "tileContentDurability": 0
         },
         {
-          "xPos": 1,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
           "xPos": 5,
           "yPos": 7,
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 6,
@@ -3963,8 +3813,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 8,
@@ -3981,44 +3831,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 5,
@@ -4035,8 +3849,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 7,
@@ -4053,8 +3867,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         },
         {
           "xPos": 9,
@@ -4066,146 +3880,9 @@
           "tileContentDurability": 0
         },
         {
-          "xPos": 1,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
           "xPos": 5,
           "yPos": 9,
           "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 10,
-          "tileType": "commonDark",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 10,
-          "tileType": "commonLight",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 10,
-          "tileType": "commonDark",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 10,
-          "tileType": "commonLight",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 10,
-          "tileType": "commonDark",
           "tileModifiers": [
             {
               "tileModifierType": "tileModifierSpawner",
@@ -4218,8 +3895,8 @@
         },
         {
           "xPos": 6,
-          "yPos": 10,
-          "tileType": "commonLight",
+          "yPos": 9,
+          "tileType": "commonDark",
           "tileModifiers": [
             {
               "tileModifierType": "tileModifierSpawner",
@@ -4232,8 +3909,8 @@
         },
         {
           "xPos": 7,
-          "yPos": 10,
-          "tileType": "commonDark",
+          "yPos": 9,
+          "tileType": "commonLight",
           "tileModifiers": [
             {
               "tileModifierType": "tileModifierSpawner",
@@ -4241,13 +3918,13 @@
             }
           ],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredPurple",
+          "tileContentDurability": 1
         },
         {
           "xPos": 8,
-          "yPos": 10,
-          "tileType": "commonLight",
+          "yPos": 9,
+          "tileType": "commonDark",
           "tileModifiers": [
             {
               "tileModifierType": "tileModifierSpawner",
@@ -4260,8 +3937,8 @@
         },
         {
           "xPos": 9,
-          "yPos": 10,
-          "tileType": "commonDark",
+          "yPos": 9,
+          "tileType": "commonLight",
           "tileModifiers": [
             {
               "tileModifierType": "tileModifierSpawner",
@@ -4269,232 +3946,28 @@
             }
           ],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
         }
       ],
       "type": null,
       "generatableItems": [
+        "coloredBlue",
         "coloredRed",
-        "coloredPurple",
-        "coloredBlue"
+        "coloredYellow",
+        "coloredGreen",
+        "coloredPurple"
       ],
       "goals": {
-        "coloredRed": 55
+        "coloredPurple": 30,
+        "coloredYellow": 30
       },
-      "moves": 55,
+      "moves": 25,
       "id": 5
     },
     {
       "boardState": [
         {
-          "xPos": 0,
-          "yPos": 0,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 0,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 0,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 0,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 0,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 0,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 0,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 0,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 0,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 0,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 0,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 1,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 1,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 2,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
           "xPos": 1,
           "yPos": 2,
           "tileType": "commonDark",
@@ -4509,8 +3982,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 3,
@@ -4527,8 +4000,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 5,
@@ -4545,8 +4018,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 7,
@@ -4563,8 +4036,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 9,
@@ -4576,31 +4049,13 @@
           "tileContentDurability": 0
         },
         {
-          "xPos": 10,
-          "yPos": 2,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 3,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
           "xPos": 1,
           "yPos": 3,
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 2,
@@ -4608,8 +4063,8 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         },
         {
           "xPos": 3,
@@ -4617,8 +4072,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 4,
@@ -4626,8 +4081,8 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         },
         {
           "xPos": 5,
@@ -4635,8 +4090,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 6,
@@ -4644,8 +4099,8 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         },
         {
           "xPos": 7,
@@ -4653,8 +4108,8 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 8,
@@ -4662,8 +4117,8 @@
           "tileType": "commonDark",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
         },
         {
           "xPos": 9,
@@ -4671,622 +4126,541 @@
           "tileType": "commonLight",
           "tileModifiers": [],
           "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 3,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 4,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
         },
         {
           "xPos": 1,
           "yPos": 4,
           "tileType": "commonDark",
           "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 4,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 4,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 4,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 4,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 4,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 4,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 4,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 4,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 4,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 5,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 5,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 5,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 5,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 5,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 5,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 5,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 5,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 5,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 5,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 5,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 6,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 6,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 6,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 6,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 6,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 6,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 6,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 6,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 6,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 6,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 6,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 7,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 7,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 8,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 8,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 1,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 2,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 3,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 4,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 5,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 6,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 7,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 8,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 9,
-          "yPos": 9,
-          "tileType": "commonLight",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 9,
-          "tileType": "commonDark",
-          "tileModifiers": [],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 0,
-          "yPos": 10,
-          "tileType": "commonLight",
-          "tileModifiers": [
+          "tileContentModifiers": [
             {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
             }
           ],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 4,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 4,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 4,
+          "yPos": 4,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 4,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 4,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 4,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 8,
+          "yPos": 4,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 9,
+          "yPos": 4,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 1,
+          "yPos": 5,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 5,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 5,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 4,
+          "yPos": 5,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 5,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 5,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 5,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 8,
+          "yPos": 5,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 9,
+          "yPos": 5,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [
+            {
+              "tileContentModifierType": "iceModifier",
+              "durability": 2
+            }
+          ],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 1,
+          "yPos": 6,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 6,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 6,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 4,
+          "yPos": 6,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 6,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 6,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 6,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 8,
+          "yPos": 6,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredYellow",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 9,
+          "yPos": 6,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 1,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 2,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 4,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 6,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 8,
+          "yPos": 7,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredRed",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 9,
+          "yPos": 7,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 1,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 2,
+          "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 3,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 4,
+          "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 5,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 6,
+          "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 7,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 8,
+          "yPos": 8,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": "coloredBlue",
+          "tileContentDurability": 1
+        },
+        {
+          "xPos": 9,
+          "yPos": 8,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 1,
+          "yPos": 9,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 2,
+          "yPos": 9,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 3,
+          "yPos": 9,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 4,
+          "yPos": 9,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 5,
+          "yPos": 9,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 6,
+          "yPos": 9,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 7,
+          "yPos": 9,
+          "tileType": "commonLight",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 8,
+          "yPos": 9,
+          "tileType": "commonDark",
+          "tileModifiers": [],
+          "tileContentModifiers": [],
+          "tileContentType": null,
+          "tileContentDurability": 0
+        },
+        {
+          "xPos": 9,
+          "yPos": 9,
+          "tileType": "commonLight",
+          "tileModifiers": [],
           "tileContentModifiers": [],
           "tileContentType": null,
           "tileContentDurability": 0
@@ -5407,20 +4781,6 @@
           "xPos": 9,
           "yPos": 10,
           "tileType": "commonDark",
-          "tileModifiers": [
-            {
-              "tileModifierType": "tileModifierSpawner",
-              "durability": 1
-            }
-          ],
-          "tileContentModifiers": [],
-          "tileContentType": null,
-          "tileContentDurability": 0
-        },
-        {
-          "xPos": 10,
-          "yPos": 10,
-          "tileType": "commonLight",
           "tileModifiers": [
             {
               "tileModifierType": "tileModifierSpawner",
@@ -5434,16 +4794,15 @@
       ],
       "type": null,
       "generatableItems": [
+        "coloredBlue",
         "coloredRed",
-        "coloredPurple",
-        "coloredBlue"
+        "coloredYellow",
+        "coloredGreen"
       ],
       "goals": {
-        "coloredRed": 99,
-        "coloredPurple": 99,
-        "coloredBlue": 99
+        "iceModifier": 10
       },
-      "moves": 99,
+      "moves": 25,
       "id": 6
     },
     {
