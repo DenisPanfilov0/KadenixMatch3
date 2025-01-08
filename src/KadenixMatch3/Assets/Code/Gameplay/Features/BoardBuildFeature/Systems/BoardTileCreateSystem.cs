@@ -27,6 +27,9 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
 
             foreach (var tile in lvl.boardState)
             {
+                if (tile == null || (tile.tileContentModifiers == null && tile.tileModifiers == null && tile.tileType == null && tile.tileContentType == null))
+                    continue;
+                
                 _tileFactory.CreateTile(TileTypeParserExtensions.TileTypeResolve(tile.tileType),
                     new Vector3(tile.xPos, tile.yPos), new Vector2Int(tile.xPos, tile.yPos), 0);
             }

@@ -31,6 +31,9 @@ namespace Code.Gameplay.Features.BoardBuildFeature.Systems
                     continue;
                 }
                 
+                if (tile == null || (tile.tileContentModifiers == null && tile.tileModifiers == null && tile.tileType == null && tile.tileContentType == null))
+                    continue;
+                
                 GameEntity topTile = TileUtilsExtensions.GetTopTileByPosition(new Vector2Int(tile.xPos, tile.yPos));
 
                 _tileFactory.CreateTile(TileTypeParserExtensions.TileTypeResolve(tile.tileContentType),
